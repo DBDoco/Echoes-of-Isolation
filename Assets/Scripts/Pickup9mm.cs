@@ -16,6 +16,10 @@ public class Pickup9mm : MonoBehaviour
     public TextMeshProUGUI Divider;
     public TextMeshProUGUI AmmoLabel;
 
+    public GameObject ObjctiveComplete;
+
+    public TextMeshProUGUI interactionText;
+
     void Start() {
         gunPickupSound.playOnAwake = false;
     }
@@ -23,10 +27,6 @@ public class Pickup9mm : MonoBehaviour
     void Update()
     {
         Distance = PlayerCasting.DistanceFromTarget;
-
-        if (Input.GetButtonDown("Action") && Distance <= 2) {
-            Take9mm();
-        }
     }
 
     void Take9mm()
@@ -41,5 +41,28 @@ public class Pickup9mm : MonoBehaviour
         AmmoDisplay.gameObject.SetActive(true);
         LoadedDisplay.gameObject.SetActive(true);
         Divider.gameObject.SetActive(true);
+    }
+
+    void OnMouseOver()
+    {
+        if (Distance <= 2)
+        {
+            interactionText.text = "[E] Pick up gun";
+            interactionText.enabled = true;
+        }
+
+        if (Input.GetButtonDown("Action"))
+        {
+
+        if (Distance <= 2) {
+            Take9mm();
+            ObjctiveComplete.SetActive(true);
+        }
+        }
+    }
+
+    void OnMouseExit()
+    {
+        interactionText.enabled = false;
     }
 }

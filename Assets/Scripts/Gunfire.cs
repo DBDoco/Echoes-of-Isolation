@@ -16,6 +16,8 @@ public class Gunshot : MonoBehaviour
     public GameObject LeftCurs;
     public GameObject RightCurs;
 
+    public GameObject ObjctiveComplete;
+
     void Start()
     {
         gunfireAudioSource.playOnAwake = false;
@@ -29,6 +31,7 @@ public class Gunshot : MonoBehaviour
             if (GlobalAmmo.LoadedAmmo > 0)
             {
                 Shoot();
+                ObjctiveComplete.SetActive(true);
             }
             else
             {
