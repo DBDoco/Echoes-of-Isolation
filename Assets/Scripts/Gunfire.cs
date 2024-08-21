@@ -9,6 +9,8 @@ public class Gunshot : MonoBehaviour
     public Animation gunAnimation;
     public string shootAnimationName = "Gunshot";
 
+    public GameObject Flash;
+
     public GameObject UpCurs;
     public GameObject DownCurs;
     public GameObject LeftCurs;
@@ -40,11 +42,14 @@ public class Gunshot : MonoBehaviour
         gunfireAudioSource.Play();
         gunAnimation.Play(shootAnimationName);
 
+        Flash.SetActive(true);
+
         UpCurs.GetComponent<Animator>().enabled = true;
         DownCurs.GetComponent<Animator>().enabled = true;
         LeftCurs.GetComponent<Animator>().enabled = true;
         RightCurs.GetComponent<Animator>().enabled = true;
 
+        StartCoroutine(MuzzleOff());
         StartCoroutine(WaitingAnim());
 
         GlobalAmmo.LoadedAmmo -= 1;
@@ -62,5 +67,10 @@ public class Gunshot : MonoBehaviour
         DownCurs.GetComponent<Animator>().enabled = false;
         LeftCurs.GetComponent<Animator>().enabled = false;
         RightCurs.GetComponent<Animator>().enabled = false;
+    }
+
+    private IEnumerator MuzzleOff() {
+        yield return new WaitForSeconds(0.1f);
+        Flash.SetActive(false);
     }
 }
