@@ -4,7 +4,13 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    public float health = 50f; 
+    public float health = 50f;
+    private EnemyMove enemyMove;
+
+    void Start()
+    {
+        enemyMove = GetComponent<EnemyMove>();
+    }
 
     public void TakeDamage(float amount)
     {
@@ -18,6 +24,13 @@ public class Enemy : MonoBehaviour
 
     void Die()
     {
-        Destroy(gameObject);
+        enemyMove.Die(); 
+        StartCoroutine(DestroyAfterAnimation()); 
+    }
+
+    IEnumerator DestroyAfterAnimation()
+    {
+        yield return new WaitForSeconds(2f);
+        Destroy(gameObject); 
     }
 }

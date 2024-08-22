@@ -47,7 +47,7 @@ public class Pickup9mm : MonoBehaviour
     {
         if (Distance <= 2)
         {
-            interactionText.text = "[E] Pick up gun";
+            interactionText.text = "[E] Pick up pistol";
             interactionText.enabled = true;
         }
 
