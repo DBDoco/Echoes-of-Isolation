@@ -5,7 +5,7 @@ public class HandgunReloading : MonoBehaviour
 {
     public AudioSource reloadAudioSource;
     public Animation gunAnimation;
-    public string reloadAnimationName = "HandgunReload";
+    private string reloadAnimationName = "HandgunReload";
 
     public GameObject UpCurs;
     public GameObject DownCurs;

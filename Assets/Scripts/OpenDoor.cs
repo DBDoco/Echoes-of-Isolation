@@ -1,6 +1,6 @@
 using System.Collections;
 using UnityEngine;
-using TMPro;  
+using TMPro;
 
 public class OpenDoor : MonoBehaviour
 {
@@ -8,6 +8,13 @@ public class OpenDoor : MonoBehaviour
     public float Distance;
     public TextMeshProUGUI interactionText;
     public GameObject ObjctiveComplete;
+    public AudioSource doorSound;
+    private bool doorIsOpening = false;
+
+    void Start()
+    {
+        doorSound.playOnAwake = false;
+    }
 
     void Update()
     {
@@ -16,8 +23,13 @@ public class OpenDoor : MonoBehaviour
 
     private IEnumerator OpenTheDoor()
     {
-        yield return new WaitForSeconds(4);
+        doorIsOpening = true;
+        doorSound.Play();
+        yield return new WaitForSeconds(3);
+        doorSound.Play();
+        yield return new WaitForSeconds(2);
         Door.GetComponent<Animator>().enabled = false;
+        doorIsOpening = false;
     }
 
     void OnMouseOver()
@@ -25,12 +37,12 @@ public class OpenDoor : MonoBehaviour
         if (Distance <= 2)
         {
             interactionText.text = "[E] Open the door";
-            interactionText.enabled = true;  
+            interactionText.enabled = true;
         }
 
         if (Input.GetButtonDown("Action"))
         {
-            if (Distance <= 2)
+            if (Distance <= 2 && !doorIsOpening)
             {
                 Door.GetComponent<Animator>().enabled = true;
                 StartCoroutine(OpenTheDoor());
@@ -41,6 +53,6 @@ public class OpenDoor : MonoBehaviour
 
     void OnMouseExit()
     {
-        interactionText.enabled = false; 
+        interactionText.enabled = false;
     }
 }

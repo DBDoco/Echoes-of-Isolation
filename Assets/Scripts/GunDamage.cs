@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class GunDamage : MonoBehaviour
 {
-    public float damage = 10f;  
-    public float range = 100f;  
+    public float damage = 10f;
+    public float range = 100f;
 
-    public Camera fpsCam;  
+    public GameObject Bullet;
+    public GameObject Blood;
+
+    public Camera fpsCam;
 
     void Update()
     {
@@ -25,7 +28,10 @@ public class GunDamage : MonoBehaviour
             Enemy target = hit.transform.GetComponent<Enemy>();
             if (target != null)
             {
+                Instantiate(Blood, hit.point, Quaternion.FromToRotation(Vector3.up, hit.normal));
                 target.TakeDamage(damage);
+            } else {
+                Instantiate(Bullet, hit.point, Quaternion.FromToRotation(Vector3.up, hit.normal));
             }
         }
     }
