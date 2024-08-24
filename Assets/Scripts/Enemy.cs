@@ -6,10 +6,12 @@ public class Enemy : MonoBehaviour
 {
     public float health = 50f;
     private EnemyMove enemyMove;
+    private EnemyLook enemyLook;
 
     void Start()
     {
         enemyMove = GetComponent<EnemyMove>();
+        enemyLook = GetComponent<EnemyLook>();
     }
 
     public void TakeDamage(float amount)
@@ -24,13 +26,17 @@ public class Enemy : MonoBehaviour
 
     void Die()
     {
-        enemyMove.Die(); 
-        StartCoroutine(DestroyAfterAnimation()); 
+        enemyMove.Die();
+        if (enemyLook != null)
+        {
+            enemyLook.Die(); 
+        }
+        StartCoroutine(DestroyAfterAnimation());
     }
 
     IEnumerator DestroyAfterAnimation()
     {
         yield return new WaitForSeconds(2f);
-        Destroy(gameObject); 
+        Destroy(gameObject);
     }
 }
