@@ -17,18 +17,9 @@ public class EnemyMove : MonoBehaviour
     private bool canAttack = true; // Track if the enemy can attack
     private bool isAttacking = false; // Track if the enemy is currently attacking
 
-    public int IsAttacking;
-    public GameObject ScreenFlash;
-    public AudioSource Hurt001;
-    public AudioSource Hurt002;
-    public AudioSource Hurt003;
-    private AudioSource[] hurtSounds;
-
     void Start()
     {
         animator = GetComponent<Animator>();
-        hurtSounds = new AudioSource[] { Hurt001, Hurt002, Hurt003 };
-        ScreenFlash.SetActive(false); // Ensure flash is initially disabled
     }
 
     void Update()
@@ -83,30 +74,12 @@ public class EnemyMove : MonoBehaviour
         float distanceToPlayer = Vector3.Distance(transform.position, ThePlayer.transform.position);
         if (distanceToPlayer <= AttackRange)
         {
-            GlobalHealth.PlayerHealth -= 1;
-
-            // Play a random hurt sound
-            PlayRandomHurtSound();
-
-            // Flash the screen
-            ScreenFlash.SetActive(true);
-            StartCoroutine(DisableFlashAfterDelay(0.1f)); // Disable the flash
+            GlobalHealth.ApplyDamage(1); // Apply 1 point of damage to the player
+            // GlobalHealth.ApplyDamage now handles the screen flash and hurt sound
         }
 
         // Start the cooldown
         StartCoroutine(AttackCooldownCoroutine());
-    }
-
-    void PlayRandomHurtSound()
-    {
-        int randomIndex = Random.Range(0, hurtSounds.Length);
-        hurtSounds[randomIndex].Play();
-    }
-
-    IEnumerator DisableFlashAfterDelay(float delay)
-    {
-        yield return new WaitForSeconds(delay);
-        ScreenFlash.SetActive(false); // Disable the screen flash
     }
 
     IEnumerator AttackCooldownCoroutine()

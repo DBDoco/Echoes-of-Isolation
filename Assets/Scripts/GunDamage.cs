@@ -25,12 +25,20 @@ public class GunDamage : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, range))
         {
-            Enemy target = hit.transform.GetComponent<Enemy>();
-            if (target != null)
+            Enemy enemyTarget = hit.transform.GetComponent<Enemy>();
+            Barrel barrelTarget = hit.transform.GetComponent<Barrel>();
+
+            if (enemyTarget != null)
             {
                 Instantiate(Blood, hit.point, Quaternion.FromToRotation(Vector3.up, hit.normal));
-                target.TakeDamage(damage);
-            } else {
+                enemyTarget.TakeDamage(damage);
+            }
+            else if (barrelTarget != null)
+            {
+                barrelTarget.TakeDamage(damage);
+            }
+            else
+            {
                 Instantiate(Bullet, hit.point, Quaternion.FromToRotation(Vector3.up, hit.normal));
             }
         }
