@@ -1,13 +1,18 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PauseGame : MonoBehaviour
 {
     public GameObject pauseMenuUI;
     public GameObject Player;
-    public GameObject PlayerCamera; 
+    public GameObject PlayerCamera;
     private bool isPaused = false;
+
+    void Start()
+    {
+        // Ensure the cursor is locked and invisible when the game starts
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+    }
 
     void Update()
     {
@@ -28,9 +33,13 @@ public class PauseGame : MonoBehaviour
     {
         pauseMenuUI.SetActive(true);
         Player.SetActive(false);
-        PlayerCamera.SetActive(true); 
+        PlayerCamera.SetActive(true);
         Time.timeScale = 0f;
         isPaused = true;
+
+        // Unlock and show the cursor
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 
     public void ResumeGame()
@@ -39,10 +48,18 @@ public class PauseGame : MonoBehaviour
         Player.SetActive(true);
         Time.timeScale = 1f;
         isPaused = false;
+
+        // Lock and hide the cursor
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
     public void QuitGame()
     {
-        Application.Quit();
+        #if UNITY_EDITOR
+            UnityEditor.EditorApplication.isPlaying = false;
+        #else
+            Application.Quit();
+        #endif
     }
 }
