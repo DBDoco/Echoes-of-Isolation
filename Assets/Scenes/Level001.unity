@@ -15435,6 +15435,7 @@ MonoBehaviour:
   pauseMenuUI: {fileID: 150157273}
   Player: {fileID: 629909978}
   PlayerCamera: {fileID: 1292803797}
+  Crosshair: {fileID: 157871638}
 --- !u!4 &1061126674
 Transform:
   m_ObjectHideFlags: 0

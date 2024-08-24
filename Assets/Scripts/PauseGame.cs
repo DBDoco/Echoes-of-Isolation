@@ -5,6 +5,7 @@ public class PauseGame : MonoBehaviour
     public GameObject pauseMenuUI;
     public GameObject Player;
     public GameObject PlayerCamera;
+    public GameObject Crosshair;
     private bool isPaused = false;
 
     void Start()
@@ -36,7 +37,7 @@ public class PauseGame : MonoBehaviour
         PlayerCamera.SetActive(true);
         Time.timeScale = 0f;
         isPaused = true;
-
+        Crosshair.SetActive(false);
         // Unlock and show the cursor
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
@@ -48,7 +49,7 @@ public class PauseGame : MonoBehaviour
         Player.SetActive(true);
         Time.timeScale = 1f;
         isPaused = false;
-
+        Crosshair.SetActive(true);
         // Lock and hide the cursor
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;

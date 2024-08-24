@@ -60,7 +60,11 @@ public class GlobalHealth : MonoBehaviour
     public static void Die()
     {
         // Handle player death (reload the scene, show game over screen, etc.)
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene("GameOver");
+        // Unlock and show the cursor
+        PlayerHealth = 5;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 
     private void TriggerScreenFlash()
