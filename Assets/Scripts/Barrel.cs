@@ -26,7 +26,6 @@ public class Barrel : MonoBehaviour
     {
         if (hasExploded) return; // Do nothing if the barrel has already exploded
 
-        Debug.Log("Barrel hit!");
         health -= amount;
 
         if (hitAudioSource != null)

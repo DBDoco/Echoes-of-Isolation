@@ -9,6 +9,7 @@ public class GunDamage : MonoBehaviour
 
     public GameObject Bullet;
     public GameObject Blood;
+    public GameObject BulletHole;  // Bullet hole prefab
 
     public Camera fpsCam;
 
@@ -30,6 +31,7 @@ public class GunDamage : MonoBehaviour
 
             if (enemyTarget != null)
             {
+                // Create blood effect
                 Instantiate(Blood, hit.point, Quaternion.FromToRotation(Vector3.up, hit.normal));
                 enemyTarget.TakeDamage(damage);
             }
@@ -39,8 +41,25 @@ public class GunDamage : MonoBehaviour
             }
             else
             {
+                // Instantiate a bullet hole at the hit point
+                CreateBulletHole(hit);
+
+                // Instantiate bullet impact effect at the hit point
                 Instantiate(Bullet, hit.point, Quaternion.FromToRotation(Vector3.up, hit.normal));
             }
         }
     }
+
+    void CreateBulletHole(RaycastHit hit)
+    {
+        // Slightly increase the offset to prevent z-fighting
+        Vector3 bulletHolePosition = hit.point + hit.normal * 0.05f;
+
+        // Instantiate the bullet hole
+        GameObject bulletHole = Instantiate(BulletHole, bulletHolePosition, Quaternion.LookRotation(hit.normal));
+
+        // Optionally do not parent it, or set a different layer or scale
+        // bulletHole.transform.SetParent(hit.transform);
+    }
+
 }
