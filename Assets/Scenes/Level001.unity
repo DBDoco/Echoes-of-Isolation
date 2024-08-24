@@ -13332,7 +13332,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
---- !u!54 &626620800
+--- !u!54 &626620802
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -14191,7 +14191,7 @@ PrefabInstance:
       addedObject: {fileID: 626620798}
     - targetCorrespondingSourceObject: {fileID: 3595625012628118935, guid: 156ea8d7801e10143a361335f8615ae7, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 626620800}
+      addedObject: {fileID: 626620802}
   m_SourcePrefab: {fileID: 100100000, guid: 156ea8d7801e10143a361335f8615ae7, type: 3}
 --- !u!1 &789046462
 GameObject:
