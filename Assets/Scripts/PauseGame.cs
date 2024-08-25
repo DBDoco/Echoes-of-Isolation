@@ -6,6 +6,7 @@ public class PauseGame : MonoBehaviour
     public GameObject pauseMenuUI;
     public GameObject Crosshair;
     private MonoBehaviour[] playerControllerScripts;
+    private MonoBehaviour[] gunScripts;
     private FirstPersonLook firstPersonLookScript;
     private Zoom zoomScript;
     private bool isPaused = false;
@@ -25,6 +26,9 @@ public class PauseGame : MonoBehaviour
             Debug.LogError("Player Controller not found! Make sure the Player object has the 'Player' tag assigned.");
         }
 
+        // Try to find and store gun scripts if the gun is active in the scene
+        TryFindGunScripts();
+
         // Ensure the cursor is locked and invisible when the game starts
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
@@ -42,6 +46,23 @@ public class PauseGame : MonoBehaviour
             {
                 Pause();
             }
+        }
+    }
+
+    private void TryFindGunScripts()
+    {
+        // Find the gun object in the scene
+        GameObject gunObject = GameObject.FindWithTag("Gun");
+
+        if (gunObject != null && gunObject.activeInHierarchy)
+        {
+            // Get all MonoBehaviour scripts attached to the gun object if it's active
+            gunScripts = gunObject.GetComponents<MonoBehaviour>();
+        }
+        else
+        {
+            Debug.Log("Gun object not found or is inactive. Skipping gun script management.");
+            gunScripts = null; // Clear any previous references to avoid errors
         }
     }
 
@@ -67,11 +88,21 @@ public class PauseGame : MonoBehaviour
 
         // Find the MainCamera scripts each time Pause is triggered
         FindMainCameraScripts();
+        TryFindGunScripts();
 
         // Disable all scripts attached to the player controller object
         if (playerControllerScripts != null)
         {
             foreach (MonoBehaviour script in playerControllerScripts)
+            {
+                script.enabled = false;
+            }
+        }
+
+        // Disable all scripts attached to the gun object, if available
+        if (gunScripts != null)
+        {
+            foreach (MonoBehaviour script in gunScripts)
             {
                 script.enabled = false;
             }
@@ -105,6 +136,15 @@ public class PauseGame : MonoBehaviour
         if (playerControllerScripts != null)
         {
             foreach (MonoBehaviour script in playerControllerScripts)
+            {
+                script.enabled = true;
+            }
+        }
+
+        // Re-enable all scripts attached to the gun object, if available
+        if (gunScripts != null)
+        {
+            foreach (MonoBehaviour script in gunScripts)
             {
                 script.enabled = true;
             }
