@@ -10,7 +10,6 @@ public class Voice001 : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Trigger entered by: " + other.name);
         StartCoroutine(Sub());
         this.GetComponent<BoxCollider>().enabled = false;
 
