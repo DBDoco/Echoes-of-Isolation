@@ -9,7 +9,6 @@ public class GunDamage : MonoBehaviour
 
     public GameObject Bullet;
     public GameObject Blood;
-    public GameObject BulletHole;  // Bullet hole prefab
 
     public Camera fpsCam;
 
@@ -17,7 +16,10 @@ public class GunDamage : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire1"))
         {
-            Shoot();
+            if (GlobalAmmo.LoadedAmmo > 0)
+            {
+                Shoot();
+            }
         }
     }
 
@@ -41,25 +43,11 @@ public class GunDamage : MonoBehaviour
             }
             else
             {
-                // Instantiate a bullet hole at the hit point
-                CreateBulletHole(hit);
-
-                // Instantiate bullet impact effect at the hit point
-                Instantiate(Bullet, hit.point, Quaternion.FromToRotation(Vector3.up, hit.normal));
+                Vector3 bulletHolePosition = hit.point + hit.normal * 0.01f;
+                GameObject bulletHoleInstance = Instantiate(Bullet, bulletHolePosition, Quaternion.FromToRotation(Vector3.up, hit.normal));
+                Destroy(bulletHoleInstance, 10f);
             }
         }
-    }
-
-    void CreateBulletHole(RaycastHit hit)
-    {
-        // Slightly increase the offset to prevent z-fighting
-        Vector3 bulletHolePosition = hit.point + hit.normal * 0.05f;
-
-        // Instantiate the bullet hole
-        GameObject bulletHole = Instantiate(BulletHole, bulletHolePosition, Quaternion.LookRotation(hit.normal));
-
-        // Optionally do not parent it, or set a different layer or scale
-        // bulletHole.transform.SetParent(hit.transform);
     }
 
 }

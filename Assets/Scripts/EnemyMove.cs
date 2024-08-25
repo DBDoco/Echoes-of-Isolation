@@ -23,10 +23,10 @@ public class EnemyMove : MonoBehaviour
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody>();
 
-        // Freeze rotation on X and Z axes to prevent tipping
+        // Freeze rotation on X and Z axes and position on Y axis to prevent tipping and falling over
         if (rb != null)
         {
-            rb.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
+            rb.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ | RigidbodyConstraints.FreezePositionY;
         }
     }
 
@@ -101,6 +101,6 @@ public class EnemyMove : MonoBehaviour
     {
         isDead = true;
         animator.SetTrigger("Die");
-        rb.constraints = RigidbodyConstraints.None; // Optionally, remove constraints on death
+        rb.constraints = RigidbodyConstraints.None;
     }
 }
