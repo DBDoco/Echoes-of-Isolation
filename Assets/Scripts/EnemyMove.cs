@@ -13,7 +13,6 @@ public class EnemyMove : MonoBehaviour
     public float DamageDelay = 0.5f; // Delay before the player takes damage
 
     private Animator animator;
-    private Rigidbody rb;
     private bool isDead = false;
     private bool canAttack = true; // Track if the enemy can attack
     private bool isAttacking = false; // Track if the enemy is currently attacking
@@ -21,13 +20,6 @@ public class EnemyMove : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
-        rb = GetComponent<Rigidbody>();
-
-        // Freeze rotation on X and Z axes and position on Y axis to prevent tipping and falling over
-        if (rb != null)
-        {
-            rb.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ | RigidbodyConstraints.FreezePositionY;
-        }
     }
 
     void Update()
@@ -101,6 +93,5 @@ public class EnemyMove : MonoBehaviour
     {
         isDead = true;
         animator.SetTrigger("Die");
-        rb.constraints = RigidbodyConstraints.None;
     }
 }
