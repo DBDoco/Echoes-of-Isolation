@@ -1,10 +1,12 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Collections.Generic;
 
 public class PauseGame : MonoBehaviour
 {
     public GameObject pauseMenuUI;
     public GameObject Crosshair;
+    public List<AudioSource> activeAudioSources = new List<AudioSource>();
     private MonoBehaviour[] playerControllerScripts;
     private MonoBehaviour[] gunScripts;
     private FirstPersonLook firstPersonLookScript;
@@ -90,6 +92,8 @@ public class PauseGame : MonoBehaviour
         FindMainCameraScripts();
         TryFindGunScripts();
 
+        PauseAllAudio();
+
         // Disable all scripts attached to the player controller object
         if (playerControllerScripts != null)
         {
@@ -164,10 +168,34 @@ public class PauseGame : MonoBehaviour
         Time.timeScale = 1f;
         isPaused = false;
         Crosshair.SetActive(true);
+        UnpauseAllAudio();
 
         // Lock and hide the cursor
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+    }
+
+    private void PauseAllAudio()
+    {
+        activeAudioSources.Clear();
+        AudioSource[] allAudioSources = FindObjectsOfType<AudioSource>();
+        foreach (AudioSource audioSource in allAudioSources)
+        {
+            if (audioSource.isPlaying)
+            {
+                audioSource.Pause();
+                activeAudioSources.Add(audioSource);
+            }
+        }
+    }
+
+    private void UnpauseAllAudio()
+    {
+        foreach (AudioSource audioSource in activeAudioSources)
+        {
+            audioSource.UnPause();
+        }
+        activeAudioSources.Clear();
     }
 
     public void Respawn()
