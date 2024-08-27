@@ -10,9 +10,13 @@ public class OpenDoor : MonoBehaviour
     public AudioSource doorSound;
     private bool doorIsOpening = false;
 
+    public string requiredKeyColor; // The color of the key required to open this door
+    private KeyCollection keyCollection; // Reference to the player's key collection
+
     void Start()
     {
         doorSound.playOnAwake = false;
+        keyCollection = GameObject.FindWithTag("Player").GetComponent<KeyCollection>(); // Ensure the player has the KeyCollection script
     }
 
     void Update()
@@ -35,7 +39,14 @@ public class OpenDoor : MonoBehaviour
     {
         if (Distance <= 2)
         {
-            interactionText.text = "[E] Open the door";
+            if (keyCollection.HasKey(requiredKeyColor))
+            {
+                interactionText.text = "[E] Open the door";
+            }
+            else
+            {
+                interactionText.text = "You need the " + requiredKeyColor + " key";
+            }
             interactionText.enabled = true;
         }
 
@@ -43,8 +54,15 @@ public class OpenDoor : MonoBehaviour
         {
             if (Distance <= 2 && !doorIsOpening)
             {
-                Door.GetComponent<Animator>().enabled = true;
-                StartCoroutine(OpenTheDoor());
+                if (keyCollection.HasKey(requiredKeyColor))
+                {
+                    Door.GetComponent<Animator>().enabled = true;
+                    StartCoroutine(OpenTheDoor());
+                }
+                else
+                {
+                    Debug.Log("Door cannot be opened without the " + requiredKeyColor + " key.");
+                }
             }
         }
     }
