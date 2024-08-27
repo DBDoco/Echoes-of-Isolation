@@ -7,7 +7,6 @@ public class OpenDoor : MonoBehaviour
     public GameObject Door;
     public float Distance;
     public TextMeshProUGUI interactionText;
-    public GameObject ObjctiveComplete;
     public AudioSource doorSound;
     private bool doorIsOpening = false;
 
@@ -46,7 +45,6 @@ public class OpenDoor : MonoBehaviour
             {
                 Door.GetComponent<Animator>().enabled = true;
                 StartCoroutine(OpenTheDoor());
-                ObjctiveComplete.SetActive(true);
             }
         }
     }

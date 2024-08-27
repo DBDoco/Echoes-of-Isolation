@@ -11,6 +11,8 @@ public class EnemyMove : MonoBehaviour
     public float AttackRange = 1.5f;
     public float AttackCooldown = 1.0f; // Cooldown time between attacks
     public float DamageDelay = 0.5f; // Delay before the player takes damage
+    public AudioClip enemySound; // The sound to play when the player is near
+    private AudioSource audioSource;
 
     private Animator animator;
     private bool isDead = false;
@@ -20,6 +22,17 @@ public class EnemyMove : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
+
+        if (audioSource == null)
+        {
+            Debug.LogError("AudioSource component missing. Please attach an AudioSource component to the enemy.");
+        }
+        else if (enemySound != null)
+        {
+            audioSource.clip = enemySound;
+            audioSource.loop = true; // Set the audio to loop
+        }
     }
 
     void Update()
@@ -41,6 +54,11 @@ public class EnemyMove : MonoBehaviour
             }
             else if (distanceToPlayer <= DetectionRadius)
             {
+                if (!audioSource.isPlaying && enemySound != null)
+                {
+                    audioSource.Play(); // Start playing the sound when the player is near
+                }
+
                 Vector3 targetPosition = ThePlayer.transform.position;
                 targetPosition.y += HeightOffset;
 
@@ -53,6 +71,10 @@ public class EnemyMove : MonoBehaviour
             else
             {
                 animator.SetFloat("Speed", 0);
+                if (audioSource.isPlaying)
+                {
+                    audioSource.Pause(); // Pause the sound if the player is out of detection range
+                }
             }
         }
         else
@@ -93,5 +115,11 @@ public class EnemyMove : MonoBehaviour
     {
         isDead = true;
         animator.SetTrigger("Die");
+
+        // Stop the sound when the enemy dies
+        if (audioSource.isPlaying)
+        {
+            audioSource.Stop();
+        }
     }
 }

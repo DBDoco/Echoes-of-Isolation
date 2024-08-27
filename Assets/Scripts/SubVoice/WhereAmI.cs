@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Voice001 : MonoBehaviour
+public class WhereAmI : MonoBehaviour
 {
     public GameObject TheSubs;
     public AudioSource Voice;
@@ -18,7 +18,7 @@ public class Voice001 : MonoBehaviour
     IEnumerator Sub()
     {
         Voice.Play();
-        TheSubs.GetComponent<Text>().text = "What is that?";
+        TheSubs.GetComponent<Text>().text = "Where am I?";
         yield return new WaitForSeconds(2);
         TheSubs.GetComponent<Text>().text = "";
 
