@@ -34,7 +34,11 @@ public class GunDamage : MonoBehaviour
             if (enemyTarget != null)
             {
                 // Create blood effect
-                Instantiate(Blood, hit.point, Quaternion.FromToRotation(Vector3.up, hit.normal));
+                GameObject bloodInstance = Instantiate(Blood, hit.point, Quaternion.FromToRotation(Vector3.up, hit.normal));
+
+                // Destroy blood effect after a delay (e.g., 5 seconds)
+                Destroy(bloodInstance, 5f);
+
                 enemyTarget.TakeDamage(damage);
             }
             else if (barrelTarget != null)
@@ -49,5 +53,4 @@ public class GunDamage : MonoBehaviour
             }
         }
     }
-
 }

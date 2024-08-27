@@ -15,6 +15,7 @@ public class EnemyMove : MonoBehaviour
     private AudioSource audioSource;
 
     private Animator animator;
+    private Rigidbody rb;
     private bool isDead = false;
     private bool canAttack = true; // Track if the enemy can attack
     private bool isAttacking = false; // Track if the enemy is currently attacking
@@ -22,6 +23,18 @@ public class EnemyMove : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
+        rb = GetComponent<Rigidbody>();
+
+        if (rb == null)
+        {
+            Debug.LogError("Rigidbody component missing. Please attach a Rigidbody component to the enemy.");
+        }
+        else
+        {
+            // Freeze rotation on all axes to prevent tipping over
+            rb.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ;
+        }
+
         audioSource = GetComponent<AudioSource>();
 
         if (audioSource == null)
