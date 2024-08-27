@@ -13504,6 +13504,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ToTarget: 0
+--- !u!54 &629909990 stripped
+Rigidbody:
+  m_CorrespondingSourceObject: {fileID: 54063890643546284, guid: 11aaea5348574644a9eb4f4504fcce3f, type: 3}
+  m_PrefabInstance: {fileID: 1877580981}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &630439196
 GameObject:
   m_ObjectHideFlags: 0
@@ -15573,6 +15578,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4001013144905581867, guid: 27badff3bcee26e49b56a443fb4744d5, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1306680473}
+    - targetCorrespondingSourceObject: {fileID: 4001013144905581867, guid: 27badff3bcee26e49b56a443fb4744d5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1306680474}
   m_SourcePrefab: {fileID: 100100000, guid: 27badff3bcee26e49b56a443fb4744d5, type: 3}
 --- !u!1 &1061126672
 GameObject:
@@ -16531,6 +16539,24 @@ MonoBehaviour:
   DownCurs: {fileID: 1380514926}
   LeftCurs: {fileID: 31519854}
   RightCurs: {fileID: 1317645348}
+--- !u!114 &1306680474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1306680466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e39fb672b7c5aea48a6119fc4779e546, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  swayAmount: 0.05
+  maxSwayAmount: 0.1
+  smoothAmount: 6
+  bobbingAmount: 0.03
+  bobbingSpeed: 5
+  playerRigidbody: {fileID: 629909990}
 --- !u!1 &1317645348
 GameObject:
   m_ObjectHideFlags: 0
