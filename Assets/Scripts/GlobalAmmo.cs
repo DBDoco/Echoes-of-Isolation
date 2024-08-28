@@ -9,7 +9,7 @@ public class GlobalAmmo : MonoBehaviour
     private int InternalAmmo;
     public TextMeshProUGUI AmmoDisplay;
 
-    public static int LoadedAmmo = 10;
+    public static int LoadedAmmo = 0;
     private int InternalLoaded;
     public TextMeshProUGUI LoadedDisplay;
 

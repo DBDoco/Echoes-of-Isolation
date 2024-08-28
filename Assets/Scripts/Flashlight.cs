@@ -4,10 +4,9 @@ public class FlashlightToggle : MonoBehaviour
 {
     public KeyCode toggleKey = KeyCode.F;  // The key to toggle the flashlight
     public AudioClip toggleSound;          // The sound to play when toggling
-    public GameObject ObjctiveComplete;
+    public GameObject ObjctiveComplete;    // This is now nullable
     private Light flashlight;
     private AudioSource audioSource;
-
 
     void Start()
     {
@@ -34,7 +33,12 @@ public class FlashlightToggle : MonoBehaviour
             if (flashlight != null)
             {
                 flashlight.enabled = !flashlight.enabled;
-                ObjctiveComplete.SetActive(true);
+
+                // Activate the ObjctiveComplete GameObject if it is assigned
+                if (ObjctiveComplete != null)
+                {
+                    ObjctiveComplete.SetActive(true);
+                }
 
                 // Play the toggle sound
                 if (toggleSound != null && audioSource != null)

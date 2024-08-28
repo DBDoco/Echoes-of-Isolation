@@ -4,7 +4,9 @@ public class KeyPickup : MonoBehaviour
 {
     public string keyColor; // The color of the key
     public AudioClip pickupSound; // The sound that plays when the key is picked up
+    public GameObject ObjctiveComplete;
     private AudioSource audioSource; // The AudioSource component
+
 
     void Start()
     {
@@ -25,6 +27,7 @@ public class KeyPickup : MonoBehaviour
 
                 // Play the pickup sound
                 audioSource.Play();
+                ObjctiveComplete.SetActive(true);
 
                 // Destroy the key object after the sound has finished playing
                 Destroy(gameObject, pickupSound.length);
