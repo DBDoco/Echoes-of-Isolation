@@ -4,70 +4,67 @@ using TMPro;
 
 public class OpenDoorWithKeycards : MonoBehaviour
 {
-    public GameObject Door;
-    public float Distance;
+    public float interactionDistance = 3f;
     public TextMeshProUGUI interactionText;
     public AudioSource doorSound;
-    private bool doorIsOpening = false;
+    private bool doorIsOpened = false;
 
-    private CardFragmentCollection cardCollection; 
+    private CardFragmentCollection cardCollection;
+    private Transform playerTransform;
+    private Animator doorAnimator;
 
     void Start()
     {
         doorSound.playOnAwake = false;
-        cardCollection = GameObject.FindWithTag("Player").GetComponent<CardFragmentCollection>();
+        GameObject player = GameObject.FindWithTag("Player");
+        cardCollection = player.GetComponent<CardFragmentCollection>();
+        playerTransform = player.transform;
+        doorAnimator = GetComponent<Animator>();
     }
 
     void Update()
     {
-        Distance = PlayerCasting.DistanceFromTarget;
+        if (playerTransform == null) return;
+
+        float distanceToPlayer = Vector3.Distance(transform.position, playerTransform.position);
+
+        if (distanceToPlayer <= interactionDistance)
+        {
+            if (cardCollection.HasAllCards() && !doorIsOpened)
+            {
+                if (!doorIsOpened)
+                    interactionText.text = "[E] Open the door";
+            }
+            else
+            {
+                if (!doorIsOpened)
+                    interactionText.text = "You need all three keycards to open this door";
+            }
+            interactionText.enabled = true;
+
+            if (Input.GetButtonDown("Action"))
+            {
+                if (!doorIsOpened)
+                {
+                    if (cardCollection.HasAllCards())
+                    {
+                        StartCoroutine(OpenTheDoor());
+                    }
+                }
+            }
+        }
+        else
+        {
+            interactionText.enabled = false;
+        }
     }
 
     private IEnumerator OpenTheDoor()
     {
-        doorIsOpening = true;
+        doorIsOpened = true;
         doorSound.Play();
-        yield return new WaitForSeconds(3);
-        doorSound.Play();
-        yield return new WaitForSeconds(2);
-        Door.GetComponent<Animator>().enabled = false;
-        doorIsOpening = false;
-    }
-
-    void OnMouseOver()
-    {
-        if (Distance <= 2)
-        {
-            if (cardCollection.HasAllCards())
-            {
-                interactionText.text = "[E] Open the door";
-            }
-            else
-            {
-                interactionText.text = "You need all three keycards to open this door";
-            }
-            interactionText.enabled = true;
-        }
-
-        if (Input.GetButtonDown("Action"))
-        {
-            if (Distance <= 2 && !doorIsOpening)
-            {
-                if (cardCollection.HasAllCards())
-                {
-                    Door.GetComponent<Animator>().enabled = true;
-                    StartCoroutine(OpenTheDoor());
-                }
-                else
-                {
-                    Debug.Log("Door cannot be opened without all three keycards.");
-                }
-            }
-        }
-    }
-
-    void OnMouseExit()
-    {
-        interactionText.enabled = false;
+        doorAnimator.enabled = true;
+        yield return new WaitForSeconds(1.2f);
+        doorAnimator.enabled = false;
     }
 }

@@ -4,42 +4,51 @@ using TMPro;
 
 public class OpenDoor : MonoBehaviour
 {
-    public GameObject Door;
-    public float Distance;
+    public float interactionDistance = 2f;
     public TextMeshProUGUI interactionText;
     public AudioSource doorSound;
-    private bool doorIsOpening = false;
+    private bool doorIsOpened = false;
 
-    public string requiredKeyColor; // The color of the key required to open this door
-    private KeyCollection keyCollection; // Reference to the player's key collection
+    public string requiredKeyColor;
+    private KeyCollection keyCollection;
+    private Transform playerTransform;
+
+    private Animator doorAnimator;
 
     void Start()
     {
         doorSound.playOnAwake = false;
-        keyCollection = GameObject.FindWithTag("Player").GetComponent<KeyCollection>(); // Ensure the player has the KeyCollection script
+        GameObject player = GameObject.FindWithTag("Player");
+        if (player == null)
+        {
+            Debug.LogError("Player not found. Make sure the player has the 'Player' tag.");
+            return;
+        }
+        keyCollection = player.GetComponent<KeyCollection>();
+        if (keyCollection == null)
+        {
+            Debug.LogError("KeyCollection script not found on the player.");
+            return;
+        }
+        playerTransform = player.transform;
+        doorAnimator = GetComponent<Animator>();
+        if (doorAnimator == null)
+        {
+            Debug.LogError("Animator component not found on the door.");
+        }
+        Debug.Log("Door initialization complete.");
     }
 
     void Update()
     {
-        Distance = PlayerCasting.DistanceFromTarget;
-    }
+        if (playerTransform == null) return;
 
-    private IEnumerator OpenTheDoor()
-    {
-        doorIsOpening = true;
-        doorSound.Play();
-        yield return new WaitForSeconds(3);
-        doorSound.Play();
-        yield return new WaitForSeconds(2);
-        Door.GetComponent<Animator>().enabled = false;
-        doorIsOpening = false;
-    }
+        float distanceToPlayer = Vector3.Distance(transform.position, playerTransform.position);
+        Debug.Log($"Distance to player: {distanceToPlayer}");
 
-    void OnMouseOver()
-    {
-        if (Distance <= 2)
+        if (distanceToPlayer <= interactionDistance)
         {
-            if (keyCollection.HasKey(requiredKeyColor))
+            if (keyCollection.HasKey(requiredKeyColor) && !doorIsOpened)
             {
                 interactionText.text = "[E] Open the door";
             }
@@ -48,27 +57,30 @@ public class OpenDoor : MonoBehaviour
                 interactionText.text = "You need the " + requiredKeyColor + " key";
             }
             interactionText.enabled = true;
-        }
 
-        if (Input.GetButtonDown("Action"))
-        {
-            if (Distance <= 2 && !doorIsOpening)
+            if (Input.GetButtonDown("Action"))
             {
-                if (keyCollection.HasKey(requiredKeyColor))
+                if (!doorIsOpened)
                 {
-                    Door.GetComponent<Animator>().enabled = true;
-                    StartCoroutine(OpenTheDoor());
-                }
-                else
-                {
-                    Debug.Log("Door cannot be opened without the " + requiredKeyColor + " key.");
+                    if (keyCollection.HasKey(requiredKeyColor))
+                    {
+                        StartCoroutine(OpenTheDoor());
+                    }
                 }
             }
         }
+        else
+        {
+            interactionText.enabled = false;
+        }
     }
 
-    void OnMouseExit()
+    private IEnumerator OpenTheDoor()
     {
-        interactionText.enabled = false;
+        doorIsOpened = true;
+        doorSound.Play();
+        doorAnimator.enabled = true;
+        yield return new WaitForSeconds(1.2f);
+        doorAnimator.enabled = false;
     }
 }
