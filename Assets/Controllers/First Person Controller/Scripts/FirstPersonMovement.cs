@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;  // Add this if you're using TextMeshPro
 
 public class FirstPersonMovement : MonoBehaviour
 {
@@ -16,18 +15,31 @@ public class FirstPersonMovement : MonoBehaviour
 
     [Header("Stamina")]
     public GameObject staminaBarObject;
-    public Image staminaBarFillImage;  // Change this to the fill image of your stamina bar
+    public Image staminaBarFillImage;
     public float Stamina, MaxStamina = 100f;
     public float staminaDrainRate = 10f;
     public float staminaRegenRate = 5f;
+    public float lowStaminaThreshold = 20f; // Threshold for low stamina
+
+    [Header("Audio")]
+    public AudioSource audioSource;  // Reference to the AudioSource component
+    public AudioClip heavyBreathingClip;  // The heavy breathing sound clip
 
     private Rigidbody rb;
+    private bool isBreathingSoundPlaying = false;
+
     public List<System.Func<float>> speedOverrides = new List<System.Func<float>>();
 
     void Awake()
     {
         rb = GetComponent<Rigidbody>();
         Stamina = MaxStamina;
+
+        // Ensure the AudioSource is properly configured
+        if (audioSource == null)
+        {
+            audioSource = GetComponent<AudioSource>();
+        }
     }
 
     void Update()
@@ -49,10 +61,17 @@ public class FirstPersonMovement : MonoBehaviour
         {
             Stamina -= staminaDrainRate * Time.deltaTime;
             staminaBarObject.SetActive(true);
+            StopBreathingSound();
         }
         else
         {
             Stamina += staminaRegenRate * Time.deltaTime;
+
+            // Play heavy breathing sound if stamina is low and not running
+            if (Stamina <= lowStaminaThreshold && !IsRunning && !isBreathingSoundPlaying)
+            {
+                PlayBreathingSound();
+            }
         }
 
         Stamina = Mathf.Clamp(Stamina, 0, MaxStamina);
@@ -95,6 +114,25 @@ public class FirstPersonMovement : MonoBehaviour
         if (!IsRunning && Stamina >= MaxStamina)
         {
             staminaBarObject.SetActive(false);
+        }
+    }
+
+    private void PlayBreathingSound()
+    {
+        if (audioSource != null && heavyBreathingClip != null)
+        {
+            audioSource.clip = heavyBreathingClip;
+            audioSource.Play();
+            isBreathingSoundPlaying = true;
+        }
+    }
+
+    private void StopBreathingSound()
+    {
+        if (audioSource != null && isBreathingSoundPlaying)
+        {
+            audioSource.Stop();
+            isBreathingSoundPlaying = false;
         }
     }
 }
