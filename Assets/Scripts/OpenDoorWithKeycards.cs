@@ -8,7 +8,6 @@ public class OpenDoorWithKeycards : MonoBehaviour
     public TextMeshProUGUI interactionText;
     public AudioSource doorSound;
     private bool doorIsOpened = false;
-
     private CardFragmentCollection cardCollection;
     private Transform playerTransform;
     private Animator doorAnimator;
@@ -28,29 +27,21 @@ public class OpenDoorWithKeycards : MonoBehaviour
 
         float distanceToPlayer = Vector3.Distance(transform.position, playerTransform.position);
 
-        if (distanceToPlayer <= interactionDistance)
+        if (distanceToPlayer <= interactionDistance && !doorIsOpened)
         {
-            if (cardCollection.HasAllCards() && !doorIsOpened)
+            if (cardCollection.HasAllCards())
             {
-                if (!doorIsOpened)
-                    interactionText.text = "[E] Open the door";
+                interactionText.text = "[E] Open the door";
             }
             else
             {
-                if (!doorIsOpened)
-                    interactionText.text = "You need all three keycards to open this door";
+                interactionText.text = "You need all three keycards to open this door";
             }
             interactionText.enabled = true;
 
-            if (Input.GetButtonDown("Action"))
+            if (Input.GetButtonDown("Action") && cardCollection.HasAllCards())
             {
-                if (!doorIsOpened)
-                {
-                    if (cardCollection.HasAllCards())
-                    {
-                        StartCoroutine(OpenTheDoor());
-                    }
-                }
+                StartCoroutine(OpenTheDoor());
             }
         }
         else
@@ -62,6 +53,7 @@ public class OpenDoorWithKeycards : MonoBehaviour
     private IEnumerator OpenTheDoor()
     {
         doorIsOpened = true;
+        interactionText.enabled = false;
         doorSound.Play();
         doorAnimator.enabled = true;
         yield return new WaitForSeconds(1.2f);
