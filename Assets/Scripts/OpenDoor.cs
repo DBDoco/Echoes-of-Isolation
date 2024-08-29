@@ -44,7 +44,6 @@ public class OpenDoor : MonoBehaviour
         if (playerTransform == null) return;
 
         float distanceToPlayer = Vector3.Distance(transform.position, playerTransform.position);
-        Debug.Log($"Distance to player: {distanceToPlayer}");
 
         if (distanceToPlayer <= interactionDistance)
         {

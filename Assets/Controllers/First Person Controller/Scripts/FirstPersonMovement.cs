@@ -19,7 +19,6 @@ public class FirstPersonMovement : MonoBehaviour
     public float Stamina, MaxStamina = 100f;
     public float staminaDrainRate = 10f;
     public float staminaRegenRate = 5f;
-    public float lowStaminaThreshold = 20f; // Threshold for low stamina
 
     [Header("Audio")]
     public AudioSource audioSource;  // Reference to the AudioSource component
@@ -68,7 +67,7 @@ public class FirstPersonMovement : MonoBehaviour
             Stamina += staminaRegenRate * Time.deltaTime;
 
             // Play heavy breathing sound if stamina is low and not running
-            if (Stamina <= lowStaminaThreshold && !IsRunning && !isBreathingSoundPlaying)
+            if (Stamina < MaxStamina && !IsRunning && !isBreathingSoundPlaying)
             {
                 PlayBreathingSound();
             }
@@ -80,7 +79,7 @@ public class FirstPersonMovement : MonoBehaviour
         {
             canRun = false;
         }
-        else if (Stamina >= 30)
+        else if (Stamina >= MaxStamina)
         {
             canRun = true;
             if (!IsRunning)
