@@ -23835,7 +23835,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
+  MinDistance: 0.9948387
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
@@ -35759,7 +35759,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 114963311885979670, guid: 11aaea5348574644a9eb4f4504fcce3f, type: 3}
       propertyPath: speed
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 114963311885979670, guid: 11aaea5348574644a9eb4f4504fcce3f, type: 3}
       propertyPath: Stamina
@@ -35767,7 +35767,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 114963311885979670, guid: 11aaea5348574644a9eb4f4504fcce3f, type: 3}
       propertyPath: runSpeed
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 114963311885979670, guid: 11aaea5348574644a9eb4f4504fcce3f, type: 3}
       propertyPath: MaxStamina
@@ -37501,7 +37501,8 @@ MonoBehaviour:
   toggleKey: 102
   toggleSound: {fileID: 8300000, guid: 8803a74bd3c3c7945af0323754f4a9e5, type: 3}
   stunSound: {fileID: 8300000, guid: 2b968be16e8d54dc9897f62548f9c640, type: 3}
-  ObjectiveComplete: {fileID: 0}
+  ToggleFlashlightObjective: {fileID: 957966302}
+  StunEnemyObjective: {fileID: 231692822}
   stunRange: 10
   stunCooldown: 5
   flashlight: {fileID: 1864565399}

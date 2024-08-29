@@ -16,7 +16,7 @@ public class Pickup9mm : MonoBehaviour
     public TextMeshProUGUI Divider;
     public TextMeshProUGUI AmmoLabel;
 
-    public GameObject ObjctiveComplete;
+    public GameObject ObjectiveComplete;
 
     public TextMeshProUGUI interactionText;
 
@@ -56,7 +56,8 @@ public class Pickup9mm : MonoBehaviour
 
         if (Distance <= 2) {
             Take9mm();
-            ObjctiveComplete.SetActive(true);
+            if (ObjectiveComplete != null)
+                ObjectiveComplete.SetActive(true);
         }
         }
     }

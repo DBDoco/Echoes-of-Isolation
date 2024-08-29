@@ -6,7 +6,8 @@ public class FlashlightToggle : MonoBehaviour
     public KeyCode toggleKey = KeyCode.F;
     public AudioClip toggleSound;
     public AudioClip stunSound;
-    public GameObject ObjectiveComplete;
+    public GameObject ToggleFlashlightObjective;
+    public GameObject StunEnemyObjective;
     public float stunRange = 10f;
     public float stunCooldown = 5f;
 
@@ -45,9 +46,9 @@ public class FlashlightToggle : MonoBehaviour
         {
             flashlight.SetActive(!flashlight.activeSelf);
 
-            if (ObjectiveComplete != null)
+            if (ToggleFlashlightObjective != null)
             {
-                ObjectiveComplete.SetActive(true);
+                ToggleFlashlightObjective.SetActive(true);
             }
 
             if (toggleSound != null && audioSource != null)
@@ -66,6 +67,10 @@ public class FlashlightToggle : MonoBehaviour
             Collider enemyCollider = enemy.GetComponent<Collider>();
             if (enemy != null && enemyCollider != null)
             {
+                if (StunEnemyObjective != null)
+                {
+                    StunEnemyObjective.SetActive(true);
+                }
                 enemy.Stun();
                 Vector3 enemyTop = enemyCollider.bounds.center + Vector3.up * enemyCollider.bounds.extents.y;
                 Vector3 stunEffectPosition = new Vector3(enemyTop.x, enemyTop.y + 0.3f, enemyTop.z);
