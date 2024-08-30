@@ -20,11 +20,6 @@ public class GeneratorActivation : MonoBehaviour
     void Start()
     {
         GameObject player = GameObject.FindWithTag("Player");
-        if (player == null)
-        {
-            Debug.LogError("Player not found. Make sure the player has the 'Player' tag.");
-            return;
-        }
         playerTransform = player.transform;
 
         runningSoundLoop.loop = true;
@@ -47,13 +42,10 @@ public class GeneratorActivation : MonoBehaviour
 
         float distanceToPlayer = Vector3.Distance(transform.position, playerTransform.position);
 
-        Debug.Log("Distance to Player: " + distanceToPlayer);
-
         if (distanceToPlayer <= interactionDistance && !isEnabled)
         {
             interactionText.text = "[E] Enable Generator";
             interactionText.enabled = true;
-            Debug.Log("Interaction Text Enabled");
 
             if (Input.GetButtonDown("Action"))
             {
@@ -63,7 +55,6 @@ public class GeneratorActivation : MonoBehaviour
         else
         {
             interactionText.enabled = false;
-            Debug.Log("Interaction Text Disabled");
         }
     }
 
