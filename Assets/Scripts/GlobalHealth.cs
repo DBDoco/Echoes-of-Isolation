@@ -66,6 +66,10 @@ public class GlobalHealth : MonoBehaviour
 
     public void Die()
     {
+        // Store the current scene name before dying
+        string currentSceneName = SceneManager.GetActiveScene().name;
+        PlayerPrefs.SetString("LastLevel", currentSceneName);
+
         // Handle player death (camera fall and then load game over scene)
         StartCoroutine(HandleDeath());
     }

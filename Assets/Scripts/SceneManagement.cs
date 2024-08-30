@@ -7,7 +7,9 @@ public class SceneManagement : MonoBehaviour
 {
     public void PlayGame()
     {
-        SceneManager.LoadScene("Level001");
+        string lastLevel = PlayerPrefs.GetString("LastLevel", "Level001");
+
+        SceneManager.LoadScene(lastLevel);
     }
 
     public void OpenMainMenu()

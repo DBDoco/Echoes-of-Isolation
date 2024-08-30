@@ -30201,7 +30201,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1329518640
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35663,7 +35663,7 @@ MonoBehaviour:
   LoadedDisplay: {fileID: 923496839}
   Divider: {fileID: 143834927}
   AmmoLabel: {fileID: 1678630466}
-  ObjctiveComplete: {fileID: 1222456348}
+  ObjectiveComplete: {fileID: 0}
   interactionText: {fileID: 2046823273}
 --- !u!1001 &1877580981
 PrefabInstance:
@@ -35851,7 +35851,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1888082068
 RectTransform:
   m_ObjectHideFlags: 0
@@ -38635,7 +38635,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keyColor: Red
   pickupSound: {fileID: 8300000, guid: ce40b511805e4f04683991cc98a39670, type: 3}
-  ObjctiveComplete: {fileID: 1222456348}
+  ObjectiveComplete: {fileID: 0}
 --- !u!65 &2078172347
 BoxCollider:
   m_ObjectHideFlags: 0
