@@ -36,7 +36,6 @@ public class OpenDoor : MonoBehaviour
         {
             Debug.LogError("Animator component not found on the door.");
         }
-        Debug.Log("Door initialization complete.");
     }
 
     void Update()
