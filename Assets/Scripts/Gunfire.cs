@@ -16,7 +16,7 @@ public class Gunshot : MonoBehaviour
     public GameObject LeftCurs;
     public GameObject RightCurs;
 
-    public GameObject ObjctiveComplete;
+    public GameObject? ObjctiveComplete;  // Made nullable
 
     void Start()
     {
@@ -31,7 +31,10 @@ public class Gunshot : MonoBehaviour
             if (GlobalAmmo.LoadedAmmo > 0)
             {
                 Shoot();
-                ObjctiveComplete.SetActive(true);
+                if (ObjctiveComplete != null)
+                {
+                    ObjctiveComplete.SetActive(true);
+                }
             }
             else
             {
@@ -72,7 +75,8 @@ public class Gunshot : MonoBehaviour
         RightCurs.GetComponent<Animator>().enabled = false;
     }
 
-    private IEnumerator MuzzleOff() {
+    private IEnumerator MuzzleOff()
+    {
         yield return new WaitForSeconds(0.1f);
         Flash.SetActive(false);
     }
