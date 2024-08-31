@@ -8,6 +8,7 @@ TagManager:
   - Ground
   - Gun
   - Document
+  - Boss
   layers:
   - Default
   - TransparentFX
