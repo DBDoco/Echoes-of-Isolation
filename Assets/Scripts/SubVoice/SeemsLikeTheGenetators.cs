@@ -7,7 +7,7 @@ public class SeemsLikeTheGenerators : MonoBehaviour
 {
     public GameObject TheSubs;
     public AudioSource Voice;
-    public AudioSource GeneratorSound; 
+    public AudioSource GeneratorSound;
 
     void OnTriggerEnter(Collider other)
     {
@@ -17,8 +17,9 @@ public class SeemsLikeTheGenerators : MonoBehaviour
 
     IEnumerator Sub()
     {
+        GeneratorSound.Play();
+        yield return new WaitForSeconds(2.5f);
         Voice.Play();
-        GeneratorSound.Play(); 
         TheSubs.GetComponent<Text>().text = "Seems like the generators turned off... I have to turn them on again";
         yield return new WaitForSeconds(4);
         TheSubs.GetComponent<Text>().text = "";

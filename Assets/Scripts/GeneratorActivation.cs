@@ -2,18 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class GeneratorActivation : MonoBehaviour
 {
     public float interactionDistance = 2f;
     public AudioSource activationSound;
     public AudioSource runningSoundLoop;
+    public AudioSource Voice;
+    public GameObject TheSubs;
     public TextMeshProUGUI interactionText;
-    public Light generatorLight; 
-    public GameObject objectiveComplete;  
-    public static int totalGenerators = 4; 
+    public Light generatorLight;
+    public GameObject objectiveComplete;
+    public static int totalGenerators = 4;
 
-    private static int enabledGenerators = 0;  
+    private static int enabledGenerators = 0;
     private bool isEnabled = false;
     private Transform playerTransform;
 
@@ -27,12 +30,12 @@ public class GeneratorActivation : MonoBehaviour
 
         if (generatorLight != null)
         {
-            generatorLight.enabled = false; 
+            generatorLight.enabled = false;
         }
 
         if (objectiveComplete != null)
         {
-            objectiveComplete.SetActive(false);  
+            objectiveComplete.SetActive(false);
         }
     }
 
@@ -75,9 +78,18 @@ public class GeneratorActivation : MonoBehaviour
 
             if (enabledGenerators == totalGenerators && objectiveComplete != null)
             {
-                objectiveComplete.SetActive(true);  
+                StartCoroutine(Sub());
+                objectiveComplete.SetActive(true);
             }
         }
+    }
+
+    private IEnumerator Sub()
+    {
+        Voice.Play();
+        TheSubs.GetComponent<Text>().text = "That should be all of the generators. I better keep going forward if I want to leave this place.";
+        yield return new WaitForSeconds(5);
+        TheSubs.GetComponent<Text>().text = "";
     }
 
     public bool IsEnabled()
