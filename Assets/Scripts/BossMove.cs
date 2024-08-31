@@ -5,13 +5,13 @@ using UnityEngine;
 public class BossMove : MonoBehaviour
 {
     public GameObject ThePlayer;
-    public float BossSpeed = 0.015f; // Slightly slower movement speed for the boss
-    public float HeightOffset = 1.5f; // Higher offset to make the boss taller
-    public float DetectionRadius = 10.0f; // Increased detection radius
-    public float AttackRange = 2.0f; // Increased attack range for the boss
-    public float AttackCooldown = 2.0f; // Longer cooldown between attacks
-    public float DamageDelay = 1.0f; // Longer delay before damage is applied
-    public AudioClip bossSound; // The sound to play when the player is near
+    public float BossSpeed = 0.015f;
+    public float HeightOffset = 1.5f; 
+    public float DetectionRadius = 10.0f; 
+    public float AttackRange = 2.0f; 
+    public float AttackCooldown = 2.0f; 
+    public float DamageDelay = 1.0f; 
+    public AudioClip bossSound; 
     private AudioSource audioSource;
 
     private Animator animator;
@@ -106,7 +106,7 @@ public class BossMove : MonoBehaviour
         float distanceToPlayer = Vector3.Distance(transform.position, ThePlayer.transform.position);
         if (distanceToPlayer <= AttackRange)
         {
-            GlobalHealth.ApplyDamage(2); // Apply more damage to the player
+            GlobalHealth.ApplyDamage(2); 
         }
 
         StartCoroutine(AttackCooldownCoroutine());
@@ -121,6 +121,8 @@ public class BossMove : MonoBehaviour
 
     public void Die()
     {
+        if (isDead) return;  
+
         isDead = true;
         animator.SetTrigger("Die");
 
