@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Boss : MonoBehaviour
 {
-    public float health = 200f; // Increased health for the boss
+    public float health = 100f; // Increased health for the boss
     public string bossName = "Boss Name"; // Name of the boss to display
 
     private BossMove bossMove;

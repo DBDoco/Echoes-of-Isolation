@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -6,7 +8,7 @@ public class BossUIManager : MonoBehaviour
     public static BossUIManager instance; // Singleton instance
 
     public Text bossNameText; // UI Text component to display the boss's name
-    public Slider bossHealthBar; // UI Slider component to display the boss's health
+    public Image bossHealthBarFillImage;
     public GameObject bossUIContainer; // The container that holds the boss UI elements
 
     private float maxHealth;
@@ -49,11 +51,10 @@ public class BossUIManager : MonoBehaviour
     /// <param name="health">The max health of the boss.</param>
     public void SetBossHealth(float health)
     {
-        if (bossHealthBar != null)
+        if (bossHealthBarFillImage != null)
         {
             maxHealth = health;
-            bossHealthBar.maxValue = maxHealth;
-            bossHealthBar.value = maxHealth;
+            bossHealthBarFillImage.fillAmount = maxHealth / maxHealth;
         }
     }
 
@@ -63,9 +64,9 @@ public class BossUIManager : MonoBehaviour
     /// <param name="currentHealth">The current health of the boss.</param>
     public void UpdateBossHealth(float currentHealth)
     {
-        if (bossHealthBar != null)
+        if (bossHealthBarFillImage != null)
         {
-            bossHealthBar.value = currentHealth;
+            bossHealthBarFillImage.fillAmount = currentHealth / maxHealth;
         }
     }
 
