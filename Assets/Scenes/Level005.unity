@@ -15079,9 +15079,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 632010427}
     m_Modifications:
+    - target: {fileID: 1632861601231834, guid: b5bd6f2a82eaf46bb8c7f34bd9a5912f, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 246569027978821770, guid: b5bd6f2a82eaf46bb8c7f34bd9a5912f, type: 3}
       propertyPath: m_Name
       value: ControlTableTwo (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2812093524578006885, guid: b5bd6f2a82eaf46bb8c7f34bd9a5912f, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3151090711216321082, guid: b5bd6f2a82eaf46bb8c7f34bd9a5912f, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7587745920266857986, guid: b5bd6f2a82eaf46bb8c7f34bd9a5912f, type: 3}
       propertyPath: m_LocalScale.x
