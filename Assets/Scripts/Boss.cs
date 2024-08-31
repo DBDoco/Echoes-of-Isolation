@@ -40,7 +40,7 @@ public class Boss : MonoBehaviour
 
     IEnumerator DestroyAfterAnimation()
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(10f);
         Destroy(gameObject);
     }
 }

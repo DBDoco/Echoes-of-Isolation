@@ -22156,7 +22156,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: ec395f2fe5ea87f43ad4e01bc1771911, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 3937603204cf7774d8a0b5f4c4e95882, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -22309,7 +22309,7 @@ MonoBehaviour:
   AttackRange: 2
   AttackCooldown: 0.5
   DamageDelay: 0.5
-  bossSound: {fileID: 8300000, guid: ec395f2fe5ea87f43ad4e01bc1771911, type: 3}
+  bossSound: {fileID: 8300000, guid: 3937603204cf7774d8a0b5f4c4e95882, type: 3}
 --- !u!114 &1514363945
 MonoBehaviour:
   m_ObjectHideFlags: 0

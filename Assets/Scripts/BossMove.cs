@@ -6,12 +6,13 @@ public class BossMove : MonoBehaviour
 {
     public GameObject ThePlayer;
     public float BossSpeed = 0.015f;
-    public float HeightOffset = 1.5f; 
-    public float DetectionRadius = 10.0f; 
-    public float AttackRange = 2.0f; 
-    public float AttackCooldown = 2.0f; 
-    public float DamageDelay = 1.0f; 
-    public AudioClip bossSound; 
+    public float HeightOffset = 1.5f;
+    public float DetectionRadius = 10.0f;
+    public float AttackRange = 2.0f;
+    public float AttackCooldown = 2.0f;
+    public float DamageDelay = 1.0f;
+    public AudioClip bossSound;
+    public AudioClip deathSound;
     private AudioSource audioSource;
 
     private Animator animator;
@@ -106,7 +107,7 @@ public class BossMove : MonoBehaviour
         float distanceToPlayer = Vector3.Distance(transform.position, ThePlayer.transform.position);
         if (distanceToPlayer <= AttackRange)
         {
-            GlobalHealth.ApplyDamage(2); 
+            GlobalHealth.ApplyDamage(2);
         }
 
         StartCoroutine(AttackCooldownCoroutine());
@@ -121,7 +122,7 @@ public class BossMove : MonoBehaviour
 
     public void Die()
     {
-        if (isDead) return;  
+        if (isDead) return;
 
         isDead = true;
         animator.SetTrigger("Die");
@@ -129,6 +130,14 @@ public class BossMove : MonoBehaviour
         if (audioSource.isPlaying)
         {
             audioSource.Stop();
+        }
+
+        // Play the death sound
+        if (deathSound != null)
+        {
+            audioSource.clip = deathSound;
+            audioSource.loop = false; 
+            audioSource.Play();
         }
     }
 }
