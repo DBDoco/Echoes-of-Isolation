@@ -15504,7 +15504,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 972cfddc31788ea4aab867847d345432, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLoad: Level006
+  sceneToLoad: Outro
   playerTag: Player
 --- !u!65 &998913243
 BoxCollider:
