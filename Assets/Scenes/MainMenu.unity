@@ -617,7 +617,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Retro Rampage
+  m_text: "Echoes Of Isolation\r"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c5f112d780f464e42a3884f9c3d90f36, type: 2}
   m_sharedMaterial: {fileID: -2741746440191818061, guid: c5f112d780f464e42a3884f9c3d90f36, type: 2}
@@ -680,7 +680,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -83.11401, y: -50.571533, z: -819.3551, w: -18.842834}
+  m_margin: {x: -83.11401, y: -50.571533, z: -1081.0646, w: -18.842834}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1518,7 +1518,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 285.5}
-  m_SizeDelta: {x: 1101, y: 150.98}
+  m_SizeDelta: {x: 1302.91, y: 150.98}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1096030878
 MonoBehaviour:
