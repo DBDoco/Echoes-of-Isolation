@@ -1,5 +1,7 @@
-using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
 
 public class Boss : MonoBehaviour
 {
@@ -10,6 +12,9 @@ public class Boss : MonoBehaviour
     private BossMove bossMove;
     private BossLook bossLook;
     private Animator animator;
+
+    public AudioSource Voice;
+    public GameObject TheSubs;
 
     void Start()
     {
@@ -38,11 +43,21 @@ public class Boss : MonoBehaviour
         if (bossLook != null) bossLook.Die();
         StartCoroutine(DestroyAfterAnimation());
         BossUIManager.instance.HideBossUI(); // Hide the boss UI after the boss is defeated
+        StartCoroutine(PlayVoice());
     }
 
     IEnumerator DestroyAfterAnimation()
     {
         yield return new WaitForSeconds(10f);
         Destroy(gameObject);
+    }
+
+    IEnumerator PlayVoice()
+    {
+        yield return new WaitForSeconds(4.5f);
+        Voice.Play();
+        TheSubs.GetComponent<Text>().text = "I am sorry... Michael... I am so sorry.";
+        yield return new WaitForSeconds(4);
+        TheSubs.GetComponent<Text>().text = "";
     }
 }
