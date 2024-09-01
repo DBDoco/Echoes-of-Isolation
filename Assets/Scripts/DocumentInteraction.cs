@@ -1,6 +1,8 @@
 using TMPro;
-using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
 
 public class DocumentInteraction : MonoBehaviour
 {
@@ -12,6 +14,7 @@ public class DocumentInteraction : MonoBehaviour
     public GameObject objectiveComplete;
     private bool isDocumentPickedUp = false;
     private bool hasPlayedVoice = false;
+    public GameObject TheSubs;
 
     void Start()
     {
@@ -43,18 +46,15 @@ public class DocumentInteraction : MonoBehaviour
         isDocumentPickedUp = true;
         documentUI.SetActive(true);
         interactionText.enabled = false;
-
-        if (!hasPlayedVoice)
-        {
-            StartCoroutine(PlayVoiceWithDelay());
-            hasPlayedVoice = true;
-        }
     }
 
     IEnumerator PlayVoiceWithDelay()
     {
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(2);
         playerVoice.Play();
+        TheSubs.GetComponent<Text>().text = "Is this the Michael I'm looking for?";
+        yield return new WaitForSeconds(2);
+        TheSubs.GetComponent<Text>().text = "";
     }
 
     void OnMouseOver()
@@ -75,5 +75,10 @@ public class DocumentInteraction : MonoBehaviour
     {
         documentUI.SetActive(false);
         isDocumentPickedUp = false;
+        if (!hasPlayedVoice)
+        {
+            StartCoroutine(PlayVoiceWithDelay());
+            hasPlayedVoice = true;
+        }
     }
 }
