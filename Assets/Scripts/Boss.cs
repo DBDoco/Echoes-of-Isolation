@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class Boss : MonoBehaviour
 {
-    public float health = 100f; // Increased health for the boss
-    public string bossName = "Boss Name"; // Name of the boss to display
+    public float health = 100f; 
+    public string bossName = "Boss Name"; 
     public GameObject objectiveComplete;
 
     private BossMove bossMove;
@@ -21,14 +21,14 @@ public class Boss : MonoBehaviour
         bossMove = GetComponent<BossMove>();
         bossLook = GetComponent<BossLook>();
         animator = GetComponent<Animator>();
-        BossUIManager.instance.SetBossName(bossName); // Set the boss name in the UI
-        BossUIManager.instance.SetBossHealth(health); // Set the initial health in the UI
+        BossUIManager.instance.SetBossName(bossName); 
+        BossUIManager.instance.SetBossHealth(health); 
     }
 
     public void TakeDamage(float amount)
     {
         health -= amount;
-        BossUIManager.instance.UpdateBossHealth(health); // Update the UI health bar
+        BossUIManager.instance.UpdateBossHealth(health);
 
         if (health <= 0f)
         {
@@ -42,7 +42,7 @@ public class Boss : MonoBehaviour
         if (bossMove != null) bossMove.Die();
         if (bossLook != null) bossLook.Die();
         StartCoroutine(DestroyAfterAnimation());
-        BossUIManager.instance.HideBossUI(); // Hide the boss UI after the boss is defeated
+        BossUIManager.instance.HideBossUI(); 
         StartCoroutine(PlayVoice());
     }
 

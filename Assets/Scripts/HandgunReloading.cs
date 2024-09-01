@@ -44,7 +44,6 @@ public class HandgunReloading : MonoBehaviour
             }
         }
 
-        // Ensure crosshair is initially visible
         SetCrosshairVisibility(true);
     }
 
@@ -67,19 +66,16 @@ public class HandgunReloading : MonoBehaviour
         isReloading = true;
         DisableShooting();
 
-        // Show crosshair at the start of reload
         SetCrosshairVisibility(false);
 
         reloadAudioSource.Play();
         gunAnimation.Play(reloadAnimationName);
 
-        // Wait for the animation to complete
         yield return new WaitForSeconds(gunAnimation[reloadAnimationName].length);
 
         GlobalAmmo.LoadedAmmo += ammoToReload;
         GlobalAmmo.CurrentAmmo -= ammoToReload;
 
-        // Hide crosshair at the end of reload
         SetCrosshairVisibility(true);
 
         EnableShooting();

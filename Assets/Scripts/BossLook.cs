@@ -5,8 +5,8 @@ using UnityEngine;
 public class BossLook : MonoBehaviour
 {
     public GameObject ThePlayer;
-    public float DetectionRadius = 15f; // Increased detection radius for the boss
-    public float RotationSpeed = 3f; // Slightly slower rotation speed for the boss
+    public float DetectionRadius = 15f; 
+    public float RotationSpeed = 3f; 
     public bool isAlive = true;
 
     void Update()
