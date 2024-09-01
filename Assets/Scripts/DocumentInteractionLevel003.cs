@@ -1,37 +1,39 @@
 using TMPro;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class DocumentInteractionLevel003 : MonoBehaviour
 {
-    public float Distance = PlayerCasting.DistanceFromTarget;
+    public float interactionDistance = 2f;
     public GameObject documentUI;
     public AudioSource paperPickupSound;
     public AudioSource playerVoice;
     public TextMeshProUGUI interactionText;
+    public GameObject TheSubs;
+
     private bool isDocumentPickedUp = false;
     private bool hasPlayedVoice = false;
-    public GameObject TheSubs;
+    private Transform playerTransform;
 
     void Start()
     {
         paperPickupSound.playOnAwake = false;
         playerVoice.playOnAwake = false;
         documentUI.SetActive(false);
+        playerTransform = Camera.main.transform;
     }
 
     void Update()
     {
-        Distance = PlayerCasting.DistanceFromTarget;
+        float distance = Vector3.Distance(playerTransform.position, transform.position);
+
         if (Input.GetKeyDown(KeyCode.E))
         {
             if (isDocumentPickedUp)
             {
                 CloseDocument();
             }
-            else if (Distance <= 2)
+            else if (distance <= interactionDistance)
             {
                 PickupDocument();
             }
@@ -50,14 +52,15 @@ public class DocumentInteractionLevel003 : MonoBehaviour
     {
         yield return new WaitForSeconds(2);
         playerVoice.Play();
-        TheSubs.GetComponent<Text>().text = "Is this the Michael I'm looking for?";
+        TheSubs.GetComponent<TextMeshProUGUI>().text = "Michael, what have they done to you?";
         yield return new WaitForSeconds(2);
-        TheSubs.GetComponent<Text>().text = "";
+        TheSubs.GetComponent<TextMeshProUGUI>().text = "";
     }
 
     void OnMouseOver()
     {
-        if (!isDocumentPickedUp && Distance <= 2)
+        float distance = Vector3.Distance(playerTransform.position, transform.position);
+        if (!isDocumentPickedUp && distance <= interactionDistance)
         {
             interactionText.text = "[E] Pick up document";
             interactionText.enabled = true;

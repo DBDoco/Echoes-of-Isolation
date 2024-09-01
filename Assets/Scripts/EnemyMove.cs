@@ -19,6 +19,7 @@ public class EnemyMove : MonoBehaviour
     private bool isDead = false;
     private bool canAttack = true; // Track if the enemy can attack
     private bool isAttacking = false; // Track if the enemy is currently attacking
+    private bool playerDetected = false; // Flag to check if the player has been detected
 
     void Start()
     {
@@ -65,8 +66,13 @@ public class EnemyMove : MonoBehaviour
             {
                 StartCoroutine(PunchPlayerWithDelay());
             }
-            else if (distanceToPlayer <= DetectionRadius)
+            else if (distanceToPlayer <= DetectionRadius || playerDetected)
             {
+                if (!playerDetected)
+                {
+                    playerDetected = true; // Player detected for the first time
+                }
+
                 if (!audioSource.isPlaying && enemySound != null)
                 {
                     audioSource.Play(); // Start playing the sound when the player is near
