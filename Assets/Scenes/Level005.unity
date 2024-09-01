@@ -34179,7 +34179,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 20
-  bossName: Orc
+  bossName: Michael
   objectiveComplete: {fileID: 1698676725}
   Voice: {fileID: 208467414}
   TheSubs: {fileID: 1187914268}
