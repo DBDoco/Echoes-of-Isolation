@@ -63,7 +63,6 @@ public class PauseGame : MonoBehaviour
 
         if (mainCameraObject != null)
         {
-            // Get the specific scripts we want to disable/enable on the Main Camera
             firstPersonLookScript = mainCameraObject.GetComponent<FirstPersonLook>();
             zoomScript = mainCameraObject.GetComponent<Zoom>();
         }

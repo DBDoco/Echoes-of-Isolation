@@ -16,7 +16,7 @@ public class Gunshot : MonoBehaviour
     public GameObject LeftCurs;
     public GameObject RightCurs;
 
-    public GameObject? ObjctiveComplete;  // Made nullable
+    public GameObject? ObjctiveComplete;  
 
     void Start()
     {

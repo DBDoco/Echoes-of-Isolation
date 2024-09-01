@@ -40,11 +40,9 @@ public class Enemy : MonoBehaviour
     {
         isStunned = true;
 
-        // Disable movement and looking
         if (enemyMove != null) enemyMove.enabled = false;
         if (enemyLook != null) enemyLook.enabled = false;
 
-        // Pause the animation
         if (animator != null)
         {
             animator.speed = 0;
@@ -52,11 +50,9 @@ public class Enemy : MonoBehaviour
 
         yield return new WaitForSeconds(stunDuration);
 
-        // Re-enable movement and looking
         if (enemyMove != null) enemyMove.enabled = true;
         if (enemyLook != null) enemyLook.enabled = true;
 
-        // Resume the animation
         if (animator != null)
         {
             animator.speed = 1;

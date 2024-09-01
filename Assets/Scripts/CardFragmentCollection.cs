@@ -9,7 +9,7 @@ public class CardFragmentCollection : MonoBehaviour
     public RawImage redCardImage;
     public RawImage blueCardImage;
     public RawImage yellowCardImage;
-    public GameObject ObjctiveComplete; // Moved here
+    public GameObject ObjctiveComplete; 
 
     void Start()
     {
@@ -17,7 +17,6 @@ public class CardFragmentCollection : MonoBehaviour
         blueCardImage.enabled = false;
         yellowCardImage.enabled = false;
 
-        // Ensure ObjctiveComplete is initially disabled
         if (ObjctiveComplete != null)
         {
             ObjctiveComplete.SetActive(false);
@@ -31,10 +30,9 @@ public class CardFragmentCollection : MonoBehaviour
             cardsCollected.Add(cardColor);
             UpdateCardUI(cardColor);
 
-            // Check if all cards are collected
             if (HasAllCards() && ObjctiveComplete != null)
             {
-                ObjctiveComplete.SetActive(true); // Activate the objective complete object
+                ObjctiveComplete.SetActive(true); 
             }
         }
     }

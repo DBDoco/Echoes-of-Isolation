@@ -132,7 +132,6 @@ public class BossMove : MonoBehaviour
             audioSource.Stop();
         }
 
-        // Play the death sound
         if (deathSound != null)
         {
             audioSource.clip = deathSound;

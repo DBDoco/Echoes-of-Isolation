@@ -9,17 +9,17 @@ public class EnemyMove : MonoBehaviour
     public float HeightOffset = 1.0f;
     public float DetectionRadius = 5.0f;
     public float AttackRange = 1.5f;
-    public float AttackCooldown = 1.0f; // Cooldown time between attacks
-    public float DamageDelay = 0.5f; // Delay before the player takes damage
-    public AudioClip enemySound; // The sound to play when the player is near
+    public float AttackCooldown = 1.0f; 
+    public float DamageDelay = 0.5f; 
+    public AudioClip enemySound; 
     private AudioSource audioSource;
 
     private Animator animator;
     private Rigidbody rb;
     private bool isDead = false;
-    private bool canAttack = true; // Track if the enemy can attack
-    private bool isAttacking = false; // Track if the enemy is currently attacking
-    private bool playerDetected = false; // Flag to check if the player has been detected
+    private bool canAttack = true; 
+    private bool isAttacking = false; 
+    private bool playerDetected = false; 
 
     void Start()
     {
@@ -32,7 +32,6 @@ public class EnemyMove : MonoBehaviour
         }
         else
         {
-            // Freeze rotation on all axes to prevent tipping over
             rb.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ;
         }
 
@@ -45,7 +44,7 @@ public class EnemyMove : MonoBehaviour
         else if (enemySound != null)
         {
             audioSource.clip = enemySound;
-            audioSource.loop = true; // Set the audio to loop
+            audioSource.loop = true; 
         }
     }
 
@@ -58,7 +57,7 @@ public class EnemyMove : MonoBehaviour
 
     void FollowPlayer()
     {
-        if (ThePlayer != null && !isAttacking) // Enemy only follows the player if it's not attacking
+        if (ThePlayer != null && !isAttacking) 
         {
             float distanceToPlayer = Vector3.Distance(transform.position, ThePlayer.transform.position);
 
@@ -70,12 +69,12 @@ public class EnemyMove : MonoBehaviour
             {
                 if (!playerDetected)
                 {
-                    playerDetected = true; // Player detected for the first time
+                    playerDetected = true; 
                 }
 
                 if (!audioSource.isPlaying && enemySound != null)
                 {
-                    audioSource.Play(); // Start playing the sound when the player is near
+                    audioSource.Play(); 
                 }
 
                 Vector3 targetPosition = ThePlayer.transform.position;
@@ -92,42 +91,38 @@ public class EnemyMove : MonoBehaviour
                 animator.SetFloat("Speed", 0);
                 if (audioSource.isPlaying)
                 {
-                    audioSource.Pause(); // Pause the sound if the player is out of detection range
+                    audioSource.Pause();
                 }
             }
         }
         else
         {
-            animator.SetFloat("Speed", 0); // Stop movement animation if attacking
+            animator.SetFloat("Speed", 0); 
         }
     }
 
     IEnumerator PunchPlayerWithDelay()
     {
         canAttack = false;
-        isAttacking = true; // Mark as attacking
+        isAttacking = true; 
         animator.SetTrigger("Punch");
 
-        // Wait for the delay before applying damage
         yield return new WaitForSeconds(DamageDelay);
 
-        // Check if the player is still within attack range before applying damage
         float distanceToPlayer = Vector3.Distance(transform.position, ThePlayer.transform.position);
         if (distanceToPlayer <= AttackRange)
         {
-            GlobalHealth.ApplyDamage(1); // Apply 1 point of damage to the player
-            // GlobalHealth.ApplyDamage now handles the screen flash and hurt sound
+            GlobalHealth.ApplyDamage(1);
         }
 
-        // Start the cooldown
         StartCoroutine(AttackCooldownCoroutine());
     }
 
     IEnumerator AttackCooldownCoroutine()
     {
-        yield return new WaitForSeconds(AttackCooldown); // Wait for the cooldown time
-        canAttack = true; // Allow attacking again
-        isAttacking = false; // End attack state
+        yield return new WaitForSeconds(AttackCooldown);
+        canAttack = true; 
+        isAttacking = false; 
     }
 
     public void Die()
@@ -135,7 +130,6 @@ public class EnemyMove : MonoBehaviour
         isDead = true;
         animator.SetTrigger("Die");
 
-        // Stop the sound when the enemy dies
         if (audioSource.isPlaying)
         {
             audioSource.Stop();
