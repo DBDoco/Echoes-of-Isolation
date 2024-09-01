@@ -5,6 +5,7 @@ public class Boss : MonoBehaviour
 {
     public float health = 100f; // Increased health for the boss
     public string bossName = "Boss Name"; // Name of the boss to display
+    public GameObject objectiveComplete;
 
     private BossMove bossMove;
     private BossLook bossLook;
@@ -27,6 +28,7 @@ public class Boss : MonoBehaviour
         if (health <= 0f)
         {
             Die();
+            objectiveComplete.SetActive(true);
         }
     }
 
