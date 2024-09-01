@@ -1252,7 +1252,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Monitor_CRT (2)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8615755711603956687, guid: 24ee88865e48f4f42ab86a745f0dcb3a, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -4066,7 +4067,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Monitor_CRT (3)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8615755711603956687, guid: 24ee88865e48f4f42ab86a745f0dcb3a, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -4140,7 +4142,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Monitor_CRT (3)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8615755711603956687, guid: 24ee88865e48f4f42ab86a745f0dcb3a, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -5196,7 +5199,38 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 260891342955449389, guid: e39d8d0ebbb4568489f039d8a185958e, type: 3}
+    - {fileID: 260891342153310082, guid: e39d8d0ebbb4568489f039d8a185958e, type: 3}
+    - {fileID: 260891343710591775, guid: e39d8d0ebbb4568489f039d8a185958e, type: 3}
+    - {fileID: 260891342920627621, guid: e39d8d0ebbb4568489f039d8a185958e, type: 3}
+    - {fileID: 260891342581422256, guid: e39d8d0ebbb4568489f039d8a185958e, type: 3}
+    - {fileID: 260891341744002237, guid: e39d8d0ebbb4568489f039d8a185958e, type: 3}
+    - {fileID: 260891342615002943, guid: e39d8d0ebbb4568489f039d8a185958e, type: 3}
+    - {fileID: 260891343607066772, guid: e39d8d0ebbb4568489f039d8a185958e, type: 3}
+    - {fileID: 260891341936493570, guid: e39d8d0ebbb4568489f039d8a185958e, type: 3}
+    - {fileID: 260891343172567379, guid: e39d8d0ebbb4568489f039d8a185958e, type: 3}
+    - {fileID: 260891342536773042, guid: e39d8d0ebbb4568489f039d8a185958e, type: 3}
+    - {fileID: 260891341747124982, guid: e39d8d0ebbb4568489f039d8a185958e, type: 3}
+    - {fileID: 260891342827844832, guid: e39d8d0ebbb4568489f039d8a185958e, type: 3}
+    - {fileID: 260891343027860293, guid: e39d8d0ebbb4568489f039d8a185958e, type: 3}
+    - {fileID: 260891343186876968, guid: e39d8d0ebbb4568489f039d8a185958e, type: 3}
+    - {fileID: 260891342729767087, guid: e39d8d0ebbb4568489f039d8a185958e, type: 3}
+    - {fileID: 260891342158358635, guid: e39d8d0ebbb4568489f039d8a185958e, type: 3}
+    - {fileID: 260891343587442609, guid: e39d8d0ebbb4568489f039d8a185958e, type: 3}
+    - {fileID: 260891342487492361, guid: e39d8d0ebbb4568489f039d8a185958e, type: 3}
+    - {fileID: 260891343505560353, guid: e39d8d0ebbb4568489f039d8a185958e, type: 3}
+    - {fileID: 260891343364360435, guid: e39d8d0ebbb4568489f039d8a185958e, type: 3}
+    - {fileID: 260891342426250194, guid: e39d8d0ebbb4568489f039d8a185958e, type: 3}
+    - {fileID: 260891343509196633, guid: e39d8d0ebbb4568489f039d8a185958e, type: 3}
+    - {fileID: 260891342835991221, guid: e39d8d0ebbb4568489f039d8a185958e, type: 3}
+    - {fileID: 260891342358934937, guid: e39d8d0ebbb4568489f039d8a185958e, type: 3}
+    - {fileID: 260891343716262419, guid: e39d8d0ebbb4568489f039d8a185958e, type: 3}
+    - {fileID: 260891343011870253, guid: e39d8d0ebbb4568489f039d8a185958e, type: 3}
+    - {fileID: 260891343332059917, guid: e39d8d0ebbb4568489f039d8a185958e, type: 3}
+    - {fileID: 260891341902448618, guid: e39d8d0ebbb4568489f039d8a185958e, type: 3}
+    - {fileID: 260891343365460071, guid: e39d8d0ebbb4568489f039d8a185958e, type: 3}
+    - {fileID: 1899066595905310138, guid: e39d8d0ebbb4568489f039d8a185958e, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -5265,7 +5299,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Monitor_CRT (2)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8615755711603956687, guid: 24ee88865e48f4f42ab86a745f0dcb3a, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -6022,7 +6057,38 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 260891342955449389, guid: e39d8d0ebbb4568489f039d8a185958e, type: 3}
+    - {fileID: 260891342153310082, guid: e39d8d0ebbb4568489f039d8a185958e, type: 3}
+    - {fileID: 260891343710591775, guid: e39d8d0ebbb4568489f039d8a185958e, type: 3}
+    - {fileID: 260891342920627621, guid: e39d8d0ebbb4568489f039d8a185958e, type: 3}
+    - {fileID: 260891342581422256, guid: e39d8d0ebbb4568489f039d8a185958e, type: 3}
+    - {fileID: 260891341744002237, guid: e39d8d0ebbb4568489f039d8a185958e, type: 3}
+    - {fileID: 260891342615002943, guid: e39d8d0ebbb4568489f039d8a185958e, type: 3}
+    - {fileID: 260891343607066772, guid: e39d8d0ebbb4568489f039d8a185958e, type: 3}
+    - {fileID: 260891341936493570, guid: e39d8d0ebbb4568489f039d8a185958e, type: 3}
+    - {fileID: 260891343172567379, guid: e39d8d0ebbb4568489f039d8a185958e, type: 3}
+    - {fileID: 260891342536773042, guid: e39d8d0ebbb4568489f039d8a185958e, type: 3}
+    - {fileID: 260891341747124982, guid: e39d8d0ebbb4568489f039d8a185958e, type: 3}
+    - {fileID: 260891342827844832, guid: e39d8d0ebbb4568489f039d8a185958e, type: 3}
+    - {fileID: 260891343027860293, guid: e39d8d0ebbb4568489f039d8a185958e, type: 3}
+    - {fileID: 260891343186876968, guid: e39d8d0ebbb4568489f039d8a185958e, type: 3}
+    - {fileID: 260891342729767087, guid: e39d8d0ebbb4568489f039d8a185958e, type: 3}
+    - {fileID: 260891342158358635, guid: e39d8d0ebbb4568489f039d8a185958e, type: 3}
+    - {fileID: 260891343587442609, guid: e39d8d0ebbb4568489f039d8a185958e, type: 3}
+    - {fileID: 260891343365460071, guid: e39d8d0ebbb4568489f039d8a185958e, type: 3}
+    - {fileID: 260891342487492361, guid: e39d8d0ebbb4568489f039d8a185958e, type: 3}
+    - {fileID: 260891343505560353, guid: e39d8d0ebbb4568489f039d8a185958e, type: 3}
+    - {fileID: 260891343364360435, guid: e39d8d0ebbb4568489f039d8a185958e, type: 3}
+    - {fileID: 260891342426250194, guid: e39d8d0ebbb4568489f039d8a185958e, type: 3}
+    - {fileID: 260891343509196633, guid: e39d8d0ebbb4568489f039d8a185958e, type: 3}
+    - {fileID: 260891342835991221, guid: e39d8d0ebbb4568489f039d8a185958e, type: 3}
+    - {fileID: 260891342358934937, guid: e39d8d0ebbb4568489f039d8a185958e, type: 3}
+    - {fileID: 260891343716262419, guid: e39d8d0ebbb4568489f039d8a185958e, type: 3}
+    - {fileID: 260891343011870253, guid: e39d8d0ebbb4568489f039d8a185958e, type: 3}
+    - {fileID: 260891343332059917, guid: e39d8d0ebbb4568489f039d8a185958e, type: 3}
+    - {fileID: 260891341902448618, guid: e39d8d0ebbb4568489f039d8a185958e, type: 3}
+    - {fileID: 1899066595905310138, guid: e39d8d0ebbb4568489f039d8a185958e, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -7482,7 +7548,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Monitor_CRT (3)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8615755711603956687, guid: 24ee88865e48f4f42ab86a745f0dcb3a, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -7588,7 +7655,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Kill the boss
+  m_text: Kill Michael
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c5f112d780f464e42a3884f9c3d90f36, type: 2}
   m_sharedMaterial: {fileID: -2741746440191818061, guid: c5f112d780f464e42a3884f9c3d90f36, type: 2}
@@ -14888,7 +14955,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1867771671602409412, guid: f4a55a18a50d3f9409759dac5283d0d7, type: 3}
+    - {fileID: 2304959262392884174, guid: f4a55a18a50d3f9409759dac5283d0d7, type: 3}
+    - {fileID: 7614301451957522911, guid: f4a55a18a50d3f9409759dac5283d0d7, type: 3}
+    - {fileID: 8344087064017965200, guid: f4a55a18a50d3f9409759dac5283d0d7, type: 3}
+    - {fileID: 6387887323045034002, guid: f4a55a18a50d3f9409759dac5283d0d7, type: 3}
+    - {fileID: 7897992903283676486, guid: f4a55a18a50d3f9409759dac5283d0d7, type: 3}
+    - {fileID: 494671487245721366, guid: f4a55a18a50d3f9409759dac5283d0d7, type: 3}
+    - {fileID: 5590046510973025131, guid: f4a55a18a50d3f9409759dac5283d0d7, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -15489,7 +15564,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Monitor_CRT (2)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8615755711603956687, guid: 24ee88865e48f4f42ab86a745f0dcb3a, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -16642,7 +16718,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Monitor_CRT (2)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8615755711603956687, guid: 24ee88865e48f4f42ab86a745f0dcb3a, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -17024,7 +17101,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Monitor_CRT (3)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8615755711603956687, guid: 24ee88865e48f4f42ab86a745f0dcb3a, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -17994,7 +18072,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Monitor_CRT (2)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8615755711603956687, guid: 24ee88865e48f4f42ab86a745f0dcb3a, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -19056,7 +19135,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Unit 1 (1)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1003697697698439896, guid: a2f125e459b626a42856ac768c3f884b, type: 3}
+    - {fileID: 70523870016057510, guid: a2f125e459b626a42856ac768c3f884b, type: 3}
+    - {fileID: 2441551612099812077, guid: a2f125e459b626a42856ac768c3f884b, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -19683,7 +19765,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Monitor_CRT (3)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8615755711603956687, guid: 24ee88865e48f4f42ab86a745f0dcb3a, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -22466,7 +22549,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Unit 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1003697697698439896, guid: a2f125e459b626a42856ac768c3f884b, type: 3}
+    - {fileID: 70523870016057510, guid: a2f125e459b626a42856ac768c3f884b, type: 3}
+    - {fileID: 2441551612099812077, guid: a2f125e459b626a42856ac768c3f884b, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -23825,7 +23911,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1867771671602409412, guid: f4a55a18a50d3f9409759dac5283d0d7, type: 3}
+    - {fileID: 2304959262392884174, guid: f4a55a18a50d3f9409759dac5283d0d7, type: 3}
+    - {fileID: 7614301451957522911, guid: f4a55a18a50d3f9409759dac5283d0d7, type: 3}
+    - {fileID: 6387887323045034002, guid: f4a55a18a50d3f9409759dac5283d0d7, type: 3}
+    - {fileID: 7897992903283676486, guid: f4a55a18a50d3f9409759dac5283d0d7, type: 3}
+    - {fileID: 494671487245721366, guid: f4a55a18a50d3f9409759dac5283d0d7, type: 3}
+    - {fileID: 8344087064017965200, guid: f4a55a18a50d3f9409759dac5283d0d7, type: 3}
+    - {fileID: 5590046510973025131, guid: f4a55a18a50d3f9409759dac5283d0d7, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -23971,7 +24065,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Monitor_CRT (3)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8615755711603956687, guid: 24ee88865e48f4f42ab86a745f0dcb3a, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -24958,7 +25053,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Monitor_CRT (2)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8615755711603956687, guid: 24ee88865e48f4f42ab86a745f0dcb3a, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -26146,7 +26242,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Monitor_CRT (2)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8615755711603956687, guid: 24ee88865e48f4f42ab86a745f0dcb3a, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -26369,7 +26466,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Monitor_CRT (3)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8615755711603956687, guid: 24ee88865e48f4f42ab86a745f0dcb3a, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -26647,7 +26745,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1867771671602409412, guid: f4a55a18a50d3f9409759dac5283d0d7, type: 3}
+    - {fileID: 2304959262392884174, guid: f4a55a18a50d3f9409759dac5283d0d7, type: 3}
+    - {fileID: 494671487245721366, guid: f4a55a18a50d3f9409759dac5283d0d7, type: 3}
+    - {fileID: 7614301451957522911, guid: f4a55a18a50d3f9409759dac5283d0d7, type: 3}
+    - {fileID: 8344087064017965200, guid: f4a55a18a50d3f9409759dac5283d0d7, type: 3}
+    - {fileID: 6387887323045034002, guid: f4a55a18a50d3f9409759dac5283d0d7, type: 3}
+    - {fileID: 7897992903283676486, guid: f4a55a18a50d3f9409759dac5283d0d7, type: 3}
+    - {fileID: 5590046510973025131, guid: f4a55a18a50d3f9409759dac5283d0d7, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -26881,7 +26987,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Monitor_CRT (2)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8615755711603956687, guid: 24ee88865e48f4f42ab86a745f0dcb3a, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -26955,7 +27062,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Monitor_CRT (2)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8615755711603956687, guid: 24ee88865e48f4f42ab86a745f0dcb3a, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -27029,7 +27137,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Monitor_CRT (3)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8615755711603956687, guid: 24ee88865e48f4f42ab86a745f0dcb3a, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -27175,7 +27284,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Monitor_CRT
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8615755711603956687, guid: 24ee88865e48f4f42ab86a745f0dcb3a, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -27244,7 +27354,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Unit 1 (2)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1003697697698439896, guid: a2f125e459b626a42856ac768c3f884b, type: 3}
+    - {fileID: 70523870016057510, guid: a2f125e459b626a42856ac768c3f884b, type: 3}
+    - {fileID: 2441551612099812077, guid: a2f125e459b626a42856ac768c3f884b, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -27370,7 +27483,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Monitor_CRT (3)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8615755711603956687, guid: 24ee88865e48f4f42ab86a745f0dcb3a, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -33635,7 +33749,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Monitor_CRT (1)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8615755711603956687, guid: 24ee88865e48f4f42ab86a745f0dcb3a, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -35697,7 +35812,38 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 260891342955449389, guid: e39d8d0ebbb4568489f039d8a185958e, type: 3}
+    - {fileID: 260891342153310082, guid: e39d8d0ebbb4568489f039d8a185958e, type: 3}
+    - {fileID: 260891342920627621, guid: e39d8d0ebbb4568489f039d8a185958e, type: 3}
+    - {fileID: 260891342581422256, guid: e39d8d0ebbb4568489f039d8a185958e, type: 3}
+    - {fileID: 260891341744002237, guid: e39d8d0ebbb4568489f039d8a185958e, type: 3}
+    - {fileID: 260891342615002943, guid: e39d8d0ebbb4568489f039d8a185958e, type: 3}
+    - {fileID: 260891343607066772, guid: e39d8d0ebbb4568489f039d8a185958e, type: 3}
+    - {fileID: 260891341936493570, guid: e39d8d0ebbb4568489f039d8a185958e, type: 3}
+    - {fileID: 260891343172567379, guid: e39d8d0ebbb4568489f039d8a185958e, type: 3}
+    - {fileID: 260891342536773042, guid: e39d8d0ebbb4568489f039d8a185958e, type: 3}
+    - {fileID: 260891341747124982, guid: e39d8d0ebbb4568489f039d8a185958e, type: 3}
+    - {fileID: 260891342827844832, guid: e39d8d0ebbb4568489f039d8a185958e, type: 3}
+    - {fileID: 260891343027860293, guid: e39d8d0ebbb4568489f039d8a185958e, type: 3}
+    - {fileID: 260891343186876968, guid: e39d8d0ebbb4568489f039d8a185958e, type: 3}
+    - {fileID: 1899066595905310138, guid: e39d8d0ebbb4568489f039d8a185958e, type: 3}
+    - {fileID: 260891342729767087, guid: e39d8d0ebbb4568489f039d8a185958e, type: 3}
+    - {fileID: 260891343710591775, guid: e39d8d0ebbb4568489f039d8a185958e, type: 3}
+    - {fileID: 260891342158358635, guid: e39d8d0ebbb4568489f039d8a185958e, type: 3}
+    - {fileID: 260891343587442609, guid: e39d8d0ebbb4568489f039d8a185958e, type: 3}
+    - {fileID: 260891343365460071, guid: e39d8d0ebbb4568489f039d8a185958e, type: 3}
+    - {fileID: 260891342487492361, guid: e39d8d0ebbb4568489f039d8a185958e, type: 3}
+    - {fileID: 260891343505560353, guid: e39d8d0ebbb4568489f039d8a185958e, type: 3}
+    - {fileID: 260891343364360435, guid: e39d8d0ebbb4568489f039d8a185958e, type: 3}
+    - {fileID: 260891342426250194, guid: e39d8d0ebbb4568489f039d8a185958e, type: 3}
+    - {fileID: 260891343509196633, guid: e39d8d0ebbb4568489f039d8a185958e, type: 3}
+    - {fileID: 260891342835991221, guid: e39d8d0ebbb4568489f039d8a185958e, type: 3}
+    - {fileID: 260891342358934937, guid: e39d8d0ebbb4568489f039d8a185958e, type: 3}
+    - {fileID: 260891343716262419, guid: e39d8d0ebbb4568489f039d8a185958e, type: 3}
+    - {fileID: 260891343011870253, guid: e39d8d0ebbb4568489f039d8a185958e, type: 3}
+    - {fileID: 260891343332059917, guid: e39d8d0ebbb4568489f039d8a185958e, type: 3}
+    - {fileID: 260891341902448618, guid: e39d8d0ebbb4568489f039d8a185958e, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -36555,7 +36701,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Monitor_CRT (3)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8615755711603956687, guid: 24ee88865e48f4f42ab86a745f0dcb3a, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -37229,7 +37376,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Monitor_CRT (2)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8615755711603956687, guid: 24ee88865e48f4f42ab86a745f0dcb3a, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
