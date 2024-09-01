@@ -5,6 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuOptions : MonoBehaviour
 {
+    public GameObject mainMenuPanel;
+    public GameObject controlsPanel; 
+
+    void Start()
+    {
+        ShowMainMenu();
+    }
+
     public void PlayGame()
     {
         SceneManager.LoadScene("Intro");
@@ -12,11 +20,22 @@ public class MainMenuOptions : MonoBehaviour
 
     public void QuitGame()
     {
-        // Close the game in the editor as well
-        #if UNITY_EDITOR
+#if UNITY_EDITOR
             UnityEditor.EditorApplication.isPlaying = false;
-        #else
-            Application.Quit();
-        #endif
+#else
+        Application.Quit();
+#endif
+    }
+
+    public void ShowControls()
+    {
+        mainMenuPanel.SetActive(false);
+        controlsPanel.SetActive(true);
+    }
+
+    public void ShowMainMenu()
+    {
+        mainMenuPanel.SetActive(true);
+        controlsPanel.SetActive(false);
     }
 }
