@@ -46,25 +46,30 @@ public class OpenDoor : MonoBehaviour
 
         if (distanceToPlayer <= interactionDistance)
         {
-            if (keyCollection.HasKey(requiredKeyColor) && !doorIsOpened)
+            if (!doorIsOpened)
             {
-                interactionText.text = "[E] Open the door";
-            }
-            else
-            {
-                interactionText.text = "You need the " + requiredKeyColor + " key";
-            }
-            interactionText.enabled = true;
+                if (keyCollection.HasKey(requiredKeyColor))
+                {
+                    interactionText.text = "[E] Open the door";
+                }
+                else
+                {
+                    interactionText.text = "You need the " + requiredKeyColor + " key";
+                }
+                interactionText.enabled = true;
 
-            if (Input.GetButtonDown("Action"))
-            {
-                if (!doorIsOpened)
+                if (Input.GetButtonDown("Action"))
                 {
                     if (keyCollection.HasKey(requiredKeyColor))
                     {
                         StartCoroutine(OpenTheDoor());
                     }
                 }
+            }
+            else
+            {
+                interactionText.text = ""; 
+                interactionText.enabled = false;
             }
         }
         else
