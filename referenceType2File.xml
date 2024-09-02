@@ -39,7 +39,7 @@
   <TypeDate>
     <guid>04d391939079343a38526ad65a85b2a2</guid>
     <fileName>Assets/Render/Palette.cs</fileName>
-    <timeStamp>2024-09-01T16:31:49.2206316+02:00</timeStamp>
+    <timeStamp>2024-09-01T19:24:33.7799567+02:00</timeStamp>
     <typeFullName>
       <string>QFSW.RetroFXUltimate.Palette</string>
     </typeFullName>
@@ -48,7 +48,7 @@
   <TypeDate>
     <guid>c456617db00bd4babb6fb5d4ad5f0a78</guid>
     <fileName>Assets/Render/RetroFX.cs</fileName>
-    <timeStamp>2024-09-01T16:31:49.2206316+02:00</timeStamp>
+    <timeStamp>2024-09-01T19:24:33.7799567+02:00</timeStamp>
     <typeFullName>
       <string>QFSW.RetroFXUltimate.RetroFX</string>
       <string>QFSW.RetroFXUltimate.MaterialExtension</string>
@@ -58,7 +58,7 @@
   <TypeDate>
     <guid>07a91d9ae94ea4843a05a3c5609b9327</guid>
     <fileName>Assets/Scripts/AmmoPickup.cs</fileName>
-    <timeStamp>2024-09-01T16:31:49.3436681+02:00</timeStamp>
+    <timeStamp>2024-09-01T19:24:33.8083949+02:00</timeStamp>
     <typeFullName>
       <string>AmmoPickup</string>
     </typeFullName>
@@ -67,7 +67,7 @@
   <TypeDate>
     <guid>0b8dc2131937d614c8ce4f0a6e1c0db1</guid>
     <fileName>Assets/Scripts/Barrel.cs</fileName>
-    <timeStamp>2024-09-01T17:48:44.4560281+02:00</timeStamp>
+    <timeStamp>2024-09-01T19:24:33.8093731+02:00</timeStamp>
     <typeFullName>
       <string>Barrel</string>
     </typeFullName>
@@ -76,7 +76,7 @@
   <TypeDate>
     <guid>d8d6da112072d2847a7cda24dc02c059</guid>
     <fileName>Assets/Scripts/Boss.cs</fileName>
-    <timeStamp>2024-09-01T17:48:59.253454+02:00</timeStamp>
+    <timeStamp>2024-09-01T19:24:33.8093731+02:00</timeStamp>
     <typeFullName>
       <string>Boss</string>
     </typeFullName>
@@ -85,7 +85,7 @@
   <TypeDate>
     <guid>c44cac5d3cece824c8f1f7217b665796</guid>
     <fileName>Assets/Scripts/BossLook.cs</fileName>
-    <timeStamp>2024-09-01T17:49:07.4356476+02:00</timeStamp>
+    <timeStamp>2024-09-01T19:24:33.8093731+02:00</timeStamp>
     <typeFullName>
       <string>BossLook</string>
     </typeFullName>
@@ -94,7 +94,7 @@
   <TypeDate>
     <guid>3f50176e87fb26d4daf1efc9226db640</guid>
     <fileName>Assets/Scripts/BossMove.cs</fileName>
-    <timeStamp>2024-09-01T17:49:17.0932757+02:00</timeStamp>
+    <timeStamp>2024-09-01T19:24:33.8103476+02:00</timeStamp>
     <typeFullName>
       <string>BossMove</string>
     </typeFullName>
@@ -103,7 +103,7 @@
   <TypeDate>
     <guid>927f53c7198ec094d8de2b23d5b3a800</guid>
     <fileName>Assets/Scripts/BossUIManager.cs</fileName>
-    <timeStamp>2024-09-01T17:49:42.8790867+02:00</timeStamp>
+    <timeStamp>2024-09-02T15:33:01.8870707+02:00</timeStamp>
     <typeFullName>
       <string>BossUIManager</string>
     </typeFullName>
@@ -112,7 +112,7 @@
   <TypeDate>
     <guid>a904f1013a373dc43b06c333ae9c4be7</guid>
     <fileName>Assets/Scripts/CardFragmentCollection.cs</fileName>
-    <timeStamp>2024-09-01T17:49:53.8152301+02:00</timeStamp>
+    <timeStamp>2024-09-01T19:24:33.8103476+02:00</timeStamp>
     <typeFullName>
       <string>CardFragmentCollection</string>
     </typeFullName>
@@ -121,7 +121,7 @@
   <TypeDate>
     <guid>6ed86cece2e252445a6fe337d2634356</guid>
     <fileName>Assets/Scripts/CardFragmentPickup.cs</fileName>
-    <timeStamp>2024-09-01T16:31:49.3895661+02:00</timeStamp>
+    <timeStamp>2024-09-01T19:24:33.8103476+02:00</timeStamp>
     <typeFullName>
       <string>CardFragmentPickup</string>
     </typeFullName>
@@ -130,7 +130,7 @@
   <TypeDate>
     <guid>8626d175da92e6f40bbbe7e8d0bf0f51</guid>
     <fileName>Assets/Scripts/DocumentInteraction.cs</fileName>
-    <timeStamp>2024-09-01T16:31:49.4051884+02:00</timeStamp>
+    <timeStamp>2024-09-01T19:24:33.8103476+02:00</timeStamp>
     <typeFullName>
       <string>DocumentInteraction</string>
     </typeFullName>
@@ -139,7 +139,7 @@
   <TypeDate>
     <guid>66820251d14b40e49a25534c92173ada</guid>
     <fileName>Assets/Scripts/DocumentInteractionLevel003.cs</fileName>
-    <timeStamp>2024-09-01T17:30:06.8180982+02:00</timeStamp>
+    <timeStamp>2024-09-01T19:24:33.8113504+02:00</timeStamp>
     <typeFullName>
       <string>DocumentInteractionLevel003</string>
     </typeFullName>
@@ -148,7 +148,7 @@
   <TypeDate>
     <guid>a4226a32483f8a243babe380ba109b65</guid>
     <fileName>Assets/Scripts/Enemy.cs</fileName>
-    <timeStamp>2024-09-01T17:53:43.8498707+02:00</timeStamp>
+    <timeStamp>2024-09-01T19:24:33.8113504+02:00</timeStamp>
     <typeFullName>
       <string>Enemy</string>
     </typeFullName>
@@ -157,7 +157,7 @@
   <TypeDate>
     <guid>fa1fedbdcf627a64cba2b68fcae34347</guid>
     <fileName>Assets/Scripts/EnemyLook.cs</fileName>
-    <timeStamp>2024-09-01T16:31:49.4139771+02:00</timeStamp>
+    <timeStamp>2024-09-01T19:24:33.8113504+02:00</timeStamp>
     <typeFullName>
       <string>EnemyLook</string>
     </typeFullName>
@@ -166,7 +166,7 @@
   <TypeDate>
     <guid>db2ed8c53c8ba5845990f7954924d87e</guid>
     <fileName>Assets/Scripts/EnemyMove.cs</fileName>
-    <timeStamp>2024-09-01T17:53:43.8444561+02:00</timeStamp>
+    <timeStamp>2024-09-01T19:24:33.8113504+02:00</timeStamp>
     <typeFullName>
       <string>EnemyMove</string>
     </typeFullName>
@@ -175,7 +175,7 @@
   <TypeDate>
     <guid>1779ed77e6725024e8e454de2a92ff00</guid>
     <fileName>Assets/Scripts/Flashlight.cs</fileName>
-    <timeStamp>2024-09-01T16:31:49.4217882+02:00</timeStamp>
+    <timeStamp>2024-09-01T19:24:33.8113504+02:00</timeStamp>
     <typeFullName>
       <string>FlashlightToggle</string>
     </typeFullName>
@@ -184,7 +184,7 @@
   <TypeDate>
     <guid>c0696246d5a8f2b45bc996462af075c4</guid>
     <fileName>Assets/Scripts/GeneratorActivation.cs</fileName>
-    <timeStamp>2024-09-01T16:31:49.4217882+02:00</timeStamp>
+    <timeStamp>2024-09-01T19:24:33.8123329+02:00</timeStamp>
     <typeFullName>
       <string>GeneratorActivation</string>
     </typeFullName>
@@ -193,7 +193,7 @@
   <TypeDate>
     <guid>cbd6341cc8cc44291a32482f2997d108</guid>
     <fileName>Assets/Scripts/GlobalAmmo.cs</fileName>
-    <timeStamp>2024-09-01T16:31:49.4296001+02:00</timeStamp>
+    <timeStamp>2024-09-01T19:24:33.8123329+02:00</timeStamp>
     <typeFullName>
       <string>GlobalAmmo</string>
     </typeFullName>
@@ -202,7 +202,7 @@
   <TypeDate>
     <guid>f03db3d09e500c7448b5f4516cacbb89</guid>
     <fileName>Assets/Scripts/GlobalHealth.cs</fileName>
-    <timeStamp>2024-09-01T17:51:40.7681785+02:00</timeStamp>
+    <timeStamp>2024-09-01T19:24:33.8123329+02:00</timeStamp>
     <typeFullName>
       <string>GlobalHealth</string>
     </typeFullName>
@@ -211,7 +211,7 @@
   <TypeDate>
     <guid>c2d0ef264fe2eb344ad157f6a48beb82</guid>
     <fileName>Assets/Scripts/GunDamage.cs</fileName>
-    <timeStamp>2024-09-01T17:53:43.8390002+02:00</timeStamp>
+    <timeStamp>2024-09-01T19:24:33.8123329+02:00</timeStamp>
     <typeFullName>
       <string>GunDamage</string>
     </typeFullName>
@@ -220,7 +220,7 @@
   <TypeDate>
     <guid>012b44d407109954593aa56805eb3ab9</guid>
     <fileName>Assets/Scripts/Gunfire.cs</fileName>
-    <timeStamp>2024-09-01T17:53:43.832602+02:00</timeStamp>
+    <timeStamp>2024-09-01T19:24:33.8133083+02:00</timeStamp>
     <typeFullName>
       <string>Gunshot</string>
     </typeFullName>
@@ -238,7 +238,7 @@
   <TypeDate>
     <guid>21a037c420dcd4450861ecf6a60778f5</guid>
     <fileName>Assets/Scripts/HandgunReloading.cs</fileName>
-    <timeStamp>2024-09-01T17:53:43.8261706+02:00</timeStamp>
+    <timeStamp>2024-09-01T19:24:33.8133083+02:00</timeStamp>
     <typeFullName>
       <string>HandgunReloading</string>
     </typeFullName>
@@ -247,7 +247,7 @@
   <TypeDate>
     <guid>876b72fd1b1f64c6b88db0daf14c5a43</guid>
     <fileName>Assets/Scripts/IntroController.cs</fileName>
-    <timeStamp>2024-09-01T16:31:49.4774488+02:00</timeStamp>
+    <timeStamp>2024-09-02T14:54:40.0434911+02:00</timeStamp>
     <typeFullName>
       <string>IntroController</string>
     </typeFullName>
@@ -256,7 +256,7 @@
   <TypeDate>
     <guid>5c5cbbd1f187d71479c54291b5da5771</guid>
     <fileName>Assets/Scripts/KeyCollection.cs</fileName>
-    <timeStamp>2024-09-01T17:53:43.8192391+02:00</timeStamp>
+    <timeStamp>2024-09-01T19:24:33.8133083+02:00</timeStamp>
     <typeFullName>
       <string>KeyCollection</string>
     </typeFullName>
@@ -265,7 +265,7 @@
   <TypeDate>
     <guid>f94ecca2c1bb44345b0abfbceebcb4b6</guid>
     <fileName>Assets/Scripts/KeyPickup.cs</fileName>
-    <timeStamp>2024-09-01T17:53:43.8143221+02:00</timeStamp>
+    <timeStamp>2024-09-01T19:24:33.8133083+02:00</timeStamp>
     <typeFullName>
       <string>KeyPickup</string>
     </typeFullName>
@@ -274,7 +274,7 @@
   <TypeDate>
     <guid>972cfddc31788ea4aab867847d345432</guid>
     <fileName>Assets/Scripts/LoadNewLevel002.cs</fileName>
-    <timeStamp>2024-09-01T16:31:49.486238+02:00</timeStamp>
+    <timeStamp>2024-09-01T19:24:33.8133083+02:00</timeStamp>
     <typeFullName>
       <string>LoadNewLevel002</string>
     </typeFullName>
@@ -283,7 +283,7 @@
   <TypeDate>
     <guid>3137e44e1c23849d9976e024dfcb6b53</guid>
     <fileName>Assets/Scripts/MainMenuOptions.cs</fileName>
-    <timeStamp>2024-09-01T16:31:49.5106517+02:00</timeStamp>
+    <timeStamp>2024-09-01T19:24:33.8142838+02:00</timeStamp>
     <typeFullName>
       <string>MainMenuOptions</string>
     </typeFullName>
@@ -292,7 +292,7 @@
   <TypeDate>
     <guid>4e883249010e7453d8bed4148a907906</guid>
     <fileName>Assets/Scripts/OpenDoor.cs</fileName>
-    <timeStamp>2024-09-01T16:31:49.5106517+02:00</timeStamp>
+    <timeStamp>2024-09-01T19:24:33.8142838+02:00</timeStamp>
     <typeFullName>
       <string>OpenDoor</string>
     </typeFullName>
@@ -301,7 +301,7 @@
   <TypeDate>
     <guid>3fd487926dcb547dca8a34ccc360fd3d</guid>
     <fileName>Assets/Scripts/OpenDoorBasic.cs</fileName>
-    <timeStamp>2024-09-01T16:31:49.5272503+02:00</timeStamp>
+    <timeStamp>2024-09-01T19:24:33.8142838+02:00</timeStamp>
     <typeFullName>
       <string>OpenDoorBasic</string>
     </typeFullName>
@@ -310,7 +310,7 @@
   <TypeDate>
     <guid>72dc88084f590c944b76eee8032cd44a</guid>
     <fileName>Assets/Scripts/OpenDoorBoss.cs</fileName>
-    <timeStamp>2024-09-01T16:31:49.5272503+02:00</timeStamp>
+    <timeStamp>2024-09-01T19:24:33.8142838+02:00</timeStamp>
     <typeFullName>
       <string>OpenDoorBoss</string>
     </typeFullName>
@@ -319,7 +319,7 @@
   <TypeDate>
     <guid>2cac55ee04e9b544d840e0bc79de4d82</guid>
     <fileName>Assets/Scripts/OpenDoorWithGenerators.cs</fileName>
-    <timeStamp>2024-09-01T16:31:49.5409224+02:00</timeStamp>
+    <timeStamp>2024-09-01T19:24:33.8142838+02:00</timeStamp>
     <typeFullName>
       <string>OpenDoorWithGenerators</string>
     </typeFullName>
@@ -328,7 +328,7 @@
   <TypeDate>
     <guid>61eb5d35c4ef2de4789de4c6a778e493</guid>
     <fileName>Assets/Scripts/OpenDoorWithKeycards.cs</fileName>
-    <timeStamp>2024-09-01T16:31:49.5409224+02:00</timeStamp>
+    <timeStamp>2024-09-01T19:24:33.8152606+02:00</timeStamp>
     <typeFullName>
       <string>OpenDoorWithKeycards</string>
     </typeFullName>
@@ -337,7 +337,7 @@
   <TypeDate>
     <guid>8965a569ad5a9403881e934801e3f69d</guid>
     <fileName>Assets/Scripts/OutroController.cs</fileName>
-    <timeStamp>2024-09-01T16:31:49.5575217+02:00</timeStamp>
+    <timeStamp>2024-09-02T15:23:53.4360897+02:00</timeStamp>
     <typeFullName>
       <string>OutroController</string>
     </typeFullName>
@@ -346,7 +346,7 @@
   <TypeDate>
     <guid>3f59cf288b3d1c2449058d4f4ed6d431</guid>
     <fileName>Assets/Scripts/PauseGame.cs</fileName>
-    <timeStamp>2024-09-01T17:53:43.8074136+02:00</timeStamp>
+    <timeStamp>2024-09-01T19:24:33.8152606+02:00</timeStamp>
     <typeFullName>
       <string>PauseGame</string>
     </typeFullName>
@@ -355,7 +355,7 @@
   <TypeDate>
     <guid>1fd712adb17fc4ecd91ed800850a9678</guid>
     <fileName>Assets/Scripts/Pickup9mm.cs</fileName>
-    <timeStamp>2024-09-01T17:29:56.2057624+02:00</timeStamp>
+    <timeStamp>2024-09-01T19:24:33.8152606+02:00</timeStamp>
     <typeFullName>
       <string>Pickup9mm</string>
     </typeFullName>
@@ -373,7 +373,7 @@
   <TypeDate>
     <guid>6f40c4e96cc694e8fb096f2c62fd5ee7</guid>
     <fileName>Assets/Scripts/PlayerCasting.cs</fileName>
-    <timeStamp>2024-09-01T17:53:43.7955613+02:00</timeStamp>
+    <timeStamp>2024-09-01T19:24:33.8152606+02:00</timeStamp>
     <typeFullName>
       <string>PlayerCasting</string>
     </typeFullName>
@@ -391,7 +391,7 @@
   <TypeDate>
     <guid>a59336430169f4a10a57a1bebe2d7793</guid>
     <fileName>Assets/Scripts/SceneManagement.cs</fileName>
-    <timeStamp>2024-09-01T16:31:49.6454077+02:00</timeStamp>
+    <timeStamp>2024-09-02T16:01:16.9566365+02:00</timeStamp>
     <typeFullName>
       <string>SceneManagement</string>
     </typeFullName>
@@ -400,7 +400,7 @@
   <TypeDate>
     <guid>df6c5a52765d3974689ba74f096b8fe1</guid>
     <fileName>Assets/Scripts/ShowText.cs</fileName>
-    <timeStamp>2024-09-01T16:31:49.6454077+02:00</timeStamp>
+    <timeStamp>2024-09-01T19:24:33.8162367+02:00</timeStamp>
     <typeFullName>
       <string>ShowText</string>
     </typeFullName>
@@ -409,7 +409,7 @@
   <TypeDate>
     <guid>2eb5c7583a3f4324a9b5d8bf69991e0f</guid>
     <fileName>Assets/Scripts/ToggleAccessRoomObjective.cs</fileName>
-    <timeStamp>2024-09-01T16:31:49.7879758+02:00</timeStamp>
+    <timeStamp>2024-09-01T19:24:33.8191666+02:00</timeStamp>
     <typeFullName>
       <string>ToggleAccessRoomObjective</string>
     </typeFullName>
@@ -418,7 +418,7 @@
   <TypeDate>
     <guid>e39fb672b7c5aea48a6119fc4779e546</guid>
     <fileName>Assets/Scripts/WeaponSway.cs</fileName>
-    <timeStamp>2024-09-01T17:53:31.9545524+02:00</timeStamp>
+    <timeStamp>2024-09-01T19:24:33.8191666+02:00</timeStamp>
     <typeFullName>
       <string>WeaponSway</string>
     </typeFullName>
@@ -445,7 +445,7 @@
   <TypeDate>
     <guid>e9ecae28ad7ae024bbd404becb6f9eb7</guid>
     <fileName>Assets/Scripts/Cutscenes/Cutscene001.cs</fileName>
-    <timeStamp>2024-09-01T16:31:49.3963999+02:00</timeStamp>
+    <timeStamp>2024-09-01T19:24:33.8103476+02:00</timeStamp>
     <typeFullName>
       <string>NewBehaviourScript</string>
     </typeFullName>
@@ -454,7 +454,7 @@
   <TypeDate>
     <guid>6d5388c5a85223c468c02d8efaf32534</guid>
     <fileName>Assets/Scripts/SubVoice/HopeIDontNeedToUseThis.cs</fileName>
-    <timeStamp>2024-09-01T16:31:49.6541961+02:00</timeStamp>
+    <timeStamp>2024-09-01T19:24:33.8162367+02:00</timeStamp>
     <typeFullName>
       <string>HopeIDontHaveToUseThis</string>
     </typeFullName>
@@ -463,7 +463,7 @@
   <TypeDate>
     <guid>3b45340ebeecaad4a85295badc428e58</guid>
     <fileName>Assets/Scripts/SubVoice/INeedToFindAWay.cs</fileName>
-    <timeStamp>2024-09-01T16:31:49.6629843+02:00</timeStamp>
+    <timeStamp>2024-09-01T19:24:33.8162367+02:00</timeStamp>
     <typeFullName>
       <string>INeedToFindAWay</string>
     </typeFullName>
@@ -472,7 +472,7 @@
   <TypeDate>
     <guid>0decb674b05654ded8df4cdd90db4502</guid>
     <fileName>Assets/Scripts/SubVoice/MichaelIsThatYou.cs</fileName>
-    <timeStamp>2024-09-01T16:31:49.6629843+02:00</timeStamp>
+    <timeStamp>2024-09-01T19:24:33.8162367+02:00</timeStamp>
     <typeFullName>
       <string>MichaelIsThatYou</string>
     </typeFullName>
@@ -481,7 +481,7 @@
   <TypeDate>
     <guid>1664a6f4abdc9404ea7278154ded7965</guid>
     <fileName>Assets/Scripts/SubVoice/SeemsLikeTheGenetators.cs</fileName>
-    <timeStamp>2024-09-01T16:31:49.6952081+02:00</timeStamp>
+    <timeStamp>2024-09-01T19:24:33.8172139+02:00</timeStamp>
     <typeFullName>
       <string>SeemsLikeTheGenerators</string>
     </typeFullName>
@@ -490,7 +490,7 @@
   <TypeDate>
     <guid>973ab6fff45eebd468a4acb6402c7247</guid>
     <fileName>Assets/Scripts/SubVoice/WhatIsThatThing.cs</fileName>
-    <timeStamp>2024-09-01T16:31:49.7674693+02:00</timeStamp>
+    <timeStamp>2024-09-01T19:24:33.818193+02:00</timeStamp>
     <typeFullName>
       <string>WhatIsThatThing</string>
     </typeFullName>
@@ -499,7 +499,7 @@
   <TypeDate>
     <guid>43af739805d439f43a1819e01800b450</guid>
     <fileName>Assets/Scripts/SubVoice/WhatIsThisPlace.cs</fileName>
-    <timeStamp>2024-09-01T16:31:49.7801637+02:00</timeStamp>
+    <timeStamp>2024-09-01T19:24:33.818193+02:00</timeStamp>
     <typeFullName>
       <string>WhatIsThisPlace</string>
     </typeFullName>
@@ -508,7 +508,7 @@
   <TypeDate>
     <guid>5bf06ad4e093b624ba6b8e4e1e3ab0e2</guid>
     <fileName>Assets/Scripts/SubVoice/WhereAmI.cs</fileName>
-    <timeStamp>2024-09-01T16:31:49.7801637+02:00</timeStamp>
+    <timeStamp>2024-09-01T19:24:33.818193+02:00</timeStamp>
     <typeFullName>
       <string>WhereAmI</string>
     </typeFullName>
@@ -517,7 +517,7 @@
   <TypeDate>
     <guid>ec72980442fddac4d86e75ab24b4d027</guid>
     <fileName>Assets/Controllers/First Person Controller/Scripts/FirstPersonLook.cs</fileName>
-    <timeStamp>2024-09-01T16:31:43.6423277+02:00</timeStamp>
+    <timeStamp>2024-09-01T19:24:31.7394155+02:00</timeStamp>
     <typeFullName>
       <string>FirstPersonLook</string>
     </typeFullName>
@@ -526,7 +526,7 @@
   <TypeDate>
     <guid>97fca36bd81de7c4cafce7bbf02ca611</guid>
     <fileName>Assets/Controllers/First Person Controller/Scripts/FirstPersonMovement.cs</fileName>
-    <timeStamp>2024-09-01T16:31:43.6423277+02:00</timeStamp>
+    <timeStamp>2024-09-01T19:24:31.7403928+02:00</timeStamp>
     <typeFullName>
       <string>FirstPersonMovement</string>
     </typeFullName>
@@ -563,7 +563,7 @@
   <TypeDate>
     <guid>27b67ddb3d23b8340b125aede56d7e8c</guid>
     <fileName>Assets/Controllers/First Person Controller/Scripts/Components/Crouch.cs</fileName>
-    <timeStamp>2024-09-01T16:31:43.6413514+02:00</timeStamp>
+    <timeStamp>2024-09-01T19:24:31.7384396+02:00</timeStamp>
     <typeFullName>
       <string>Crouch</string>
     </typeFullName>
@@ -572,7 +572,7 @@
   <TypeDate>
     <guid>6f45facc01772ba47a9ae17bb7061b71</guid>
     <fileName>Assets/Controllers/First Person Controller/Scripts/Components/FirstPersonAudio.cs</fileName>
-    <timeStamp>2024-09-01T16:31:43.6413514+02:00</timeStamp>
+    <timeStamp>2024-09-01T19:24:31.7394155+02:00</timeStamp>
     <typeFullName>
       <string>FirstPersonAudio</string>
     </typeFullName>
@@ -581,7 +581,7 @@
   <TypeDate>
     <guid>084c01ab381b9da4082c1f84cf70751b</guid>
     <fileName>Assets/Controllers/First Person Controller/Scripts/Components/GroundCheck.cs</fileName>
-    <timeStamp>2024-09-01T16:31:43.6413514+02:00</timeStamp>
+    <timeStamp>2024-09-01T19:24:31.7394155+02:00</timeStamp>
     <typeFullName>
       <string>GroundCheck</string>
     </typeFullName>
@@ -590,7 +590,7 @@
   <TypeDate>
     <guid>8f977f53412d81140ab13b3fca57cca2</guid>
     <fileName>Assets/Controllers/First Person Controller/Scripts/Components/Jump.cs</fileName>
-    <timeStamp>2024-09-01T16:31:43.6413514+02:00</timeStamp>
+    <timeStamp>2024-09-01T19:24:31.7394155+02:00</timeStamp>
     <typeFullName>
       <string>Jump</string>
     </typeFullName>
@@ -599,9 +599,54 @@
   <TypeDate>
     <guid>780f90e951d635f439326ea715cd97e9</guid>
     <fileName>Assets/Controllers/First Person Controller/Scripts/Components/Zoom.cs</fileName>
-    <timeStamp>2024-09-01T16:31:43.6413514+02:00</timeStamp>
+    <timeStamp>2024-09-01T19:24:31.7394155+02:00</timeStamp>
     <typeFullName>
       <string>Zoom</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>f327768101cba754386d3e13c0f09d91</guid>
+    <fileName>Assets/Plugins/UnitySweeper/Editor/AssetCollector.cs</fileName>
+    <timeStamp>2024-09-02T16:12:57.3282046+02:00</timeStamp>
+    <typeFullName />
+  </TypeDate>
+  <TypeDate>
+    <guid>1bae5f1d865c98044bcb98c63472a137</guid>
+    <fileName>Assets/Plugins/UnitySweeper/Editor/AssetReferenceCollection.cs</fileName>
+    <timeStamp>2024-09-02T16:12:57.3282046+02:00</timeStamp>
+    <typeFullName />
+  </TypeDate>
+  <TypeDate>
+    <guid>96cdcdd5e6a5ecd4d90ef04dc2b347ae</guid>
+    <fileName>Assets/Plugins/UnitySweeper/Editor/ClassReferenceCollection.cs</fileName>
+    <timeStamp>2024-09-02T16:12:57.3282046+02:00</timeStamp>
+    <typeFullName />
+  </TypeDate>
+  <TypeDate>
+    <guid>460e79db2340308429cbf0c16cb0df7e</guid>
+    <fileName>Assets/Plugins/UnitySweeper/Editor/CollectionData.cs</fileName>
+    <timeStamp>2024-09-02T16:12:57.3282046+02:00</timeStamp>
+    <typeFullName />
+  </TypeDate>
+  <TypeDate>
+    <guid>e4c428eeb53eca942816dcd8b49ff596</guid>
+    <fileName>Assets/Plugins/UnitySweeper/Editor/FindUnusedAssetsWindow.cs</fileName>
+    <timeStamp>2024-09-02T16:12:57.3292081+02:00</timeStamp>
+    <typeFullName />
+  </TypeDate>
+  <TypeDate>
+    <guid>f4ab3721cc94793439bd6080657a589a</guid>
+    <fileName>Assets/Plugins/UnitySweeper/Editor/ShaderReferenceCollection.cs</fileName>
+    <timeStamp>2024-09-02T16:12:57.3292081+02:00</timeStamp>
+    <typeFullName />
+  </TypeDate>
+  <TypeDate>
+    <guid>d35b50aa991b3e84f93a0998dc0fb827</guid>
+    <fileName>Assets/Scripts/OpenDoorGunCheck.cs</fileName>
+    <timeStamp>2024-09-01T19:24:33.8142838+02:00</timeStamp>
+    <typeFullName>
+      <string>OpenDoorGunCheck</string>
     </typeFullName>
     <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
   </TypeDate>

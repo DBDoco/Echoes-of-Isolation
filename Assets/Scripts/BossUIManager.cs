@@ -73,4 +73,19 @@ public class BossUIManager : MonoBehaviour
             bossUIContainer.SetActive(false);
         }
     }
+
+    public void ResetBossUI()
+    {
+        if (bossHealthBarFillImage != null)
+        {
+            bossHealthBarFillImage.fillAmount = 1f; 
+        }
+
+        if (bossNameText != null)
+        {
+            bossNameText.text = "";
+        }
+
+        HideBossUI();
+    }
 }

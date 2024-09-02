@@ -19,16 +19,6 @@ public class SceneManagement : MonoBehaviour
 
     private IEnumerator ReloadScene(string sceneName)
     {
-        AsyncOperation unloadOperation = SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene().name);
-
-        while (!unloadOperation.isDone)
-        {
-            yield return null;
-        }
-
-        System.GC.Collect();
-        Resources.UnloadUnusedAssets();
-
         AsyncOperation loadOperation = SceneManager.LoadSceneAsync(sceneName);
 
         while (!loadOperation.isDone)
