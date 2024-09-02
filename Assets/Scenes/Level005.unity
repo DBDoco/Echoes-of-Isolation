@@ -14600,7 +14600,6 @@ MonoBehaviour:
   interactionDistance: 3
   interactionText: {fileID: 824290908}
   doorSound: {fileID: 529498231}
-  boss: {fileID: 1815828407}
   ObjectiveComplete: {fileID: 1698676725}
 --- !u!95 &1060377727
 Animator:
@@ -15376,7 +15375,7 @@ Transform:
   m_GameObject: {fileID: 1114940751}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 59.69, y: 0.56, z: 4.531}
+  m_LocalPosition: {x: 59.69, y: 0.56, z: 4.182}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -28616,7 +28615,7 @@ MonoBehaviour:
   ThePlayer: {fileID: 761456154}
   BossSpeed: 4
   HeightOffset: 0
-  DetectionRadius: 15
+  DetectionRadius: 20
   AttackRange: 2
   AttackCooldown: 0.5
   DamageDelay: 0.5
@@ -28635,7 +28634,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ThePlayer: {fileID: 761456154}
-  DetectionRadius: 15
+  DetectionRadius: 20
   RotationSpeed: 3
   isAlive: 1
 --- !u!114 &1815828407
