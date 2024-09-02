@@ -9,11 +9,31 @@ public class SceneManagement : MonoBehaviour
     {
         string lastLevel = PlayerPrefs.GetString("LastLevel", "Level001");
 
-        SceneManager.LoadScene(lastLevel);
+        StartCoroutine(ReloadScene(lastLevel));
     }
 
     public void OpenMainMenu()
     {
         SceneManager.LoadScene("MainMenu");
+    }
+
+    private IEnumerator ReloadScene(string sceneName)
+    {
+        AsyncOperation unloadOperation = SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene().name);
+
+        while (!unloadOperation.isDone)
+        {
+            yield return null;
+        }
+
+        System.GC.Collect();
+        Resources.UnloadUnusedAssets();
+
+        AsyncOperation loadOperation = SceneManager.LoadSceneAsync(sceneName);
+
+        while (!loadOperation.isDone)
+        {
+            yield return null;
+        }
     }
 }
