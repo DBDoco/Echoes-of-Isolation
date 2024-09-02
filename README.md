@@ -8,7 +8,7 @@
 
 _In the remote wilderness of Duskridge Mountains, there stands a forgotten relic of the past - the Whispering Pines Asylum. Once a beacon of hope for the mentally ill, it now lies abandoned, its halls echoing with untold secrets._
 
-_You are Dr. Ethan White, a renowned psychologist specializing in extreme cases of agoraphobia. Your latest case has brought you to this desolate place - a patient named Michael, who hasn't left the asylum in decades._
+_You are Dr. Ethan Chen, a renowned psychologist specializing in extreme cases of agoraphobia. Your latest case has brought you to this desolate place - a patient named Michael, who hasn't left the asylum in decades._
 
 _As you approach the decaying structure, a sense of unease washes over you. The asylum looms before you, its windows dark and uninviting. You've been warned that the building's condition is hazardous, but nothing could have prepared you for what awaits inside._
 
