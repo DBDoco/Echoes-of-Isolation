@@ -47,7 +47,7 @@ public class OpenDoorBoss : MonoBehaviour
         {
             if (!doorIsOpened)
             {
-                if (boss.health <= 0f) 
+                if (boss.health <= 0.1f)
                 {
                     interactionText.text = "[E] Open the door";
                     interactionText.enabled = true;

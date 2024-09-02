@@ -32,7 +32,7 @@ public class DocumentInteraction : MonoBehaviour
             {
                 CloseDocument();
             }
-            else if (Distance <= 2)
+            else if (Distance <= 1)
             {
                 PickupDocument();
             }
