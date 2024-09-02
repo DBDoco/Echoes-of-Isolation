@@ -6,11 +6,13 @@ using UnityEngine.SceneManagement;
 public class MainMenuOptions : MonoBehaviour
 {
     public GameObject mainMenuPanel;
-    public GameObject controlsPanel; 
+    public GameObject controlsPanel;
 
     void Start()
     {
         ShowMainMenu();
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 
     public void PlayGame()

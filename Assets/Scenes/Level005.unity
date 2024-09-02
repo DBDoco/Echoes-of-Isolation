@@ -14601,6 +14601,7 @@ MonoBehaviour:
   interactionText: {fileID: 824290908}
   doorSound: {fileID: 529498231}
   boss: {fileID: 1815828407}
+  ObjectiveComplete: {fileID: 1698676725}
 --- !u!95 &1060377727
 Animator:
   serializedVersion: 5

@@ -19529,8 +19529,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 5.475448}
+  m_Center: {x: 0, y: 0, z: 2.2377236}
 --- !u!114 &696218676
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19543,7 +19543,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df6c5a52765d3974689ba74f096b8fe1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  displayMessage: Press [F] to toggle flashlight
+  displayMessage: Press [F] to toggle flashlight. [RMB] to stun enemies.
   uiText: {fileID: 1934710575}
 --- !u!1 &727668776
 GameObject:
@@ -31077,8 +31077,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.7, y: -172.11098}
-  m_SizeDelta: {x: 268.8395, y: 50.222}
+  m_AnchoredPosition: {x: 0.7, y: -159.5}
+  m_SizeDelta: {x: 268.8395, y: 85.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1934710575
 MonoBehaviour:

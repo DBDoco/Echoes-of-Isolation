@@ -11,8 +11,7 @@ public class OpenDoorBoss : MonoBehaviour
 
     private Transform playerTransform;
     private Animator doorAnimator;
-
-    public Boss boss;
+    public GameObject ObjectiveComplete;
 
     void Start()
     {
@@ -30,16 +29,11 @@ public class OpenDoorBoss : MonoBehaviour
         {
             Debug.LogError("Animator component not found on the door.");
         }
-
-        if (boss == null)
-        {
-            Debug.LogError("Boss reference not set on the door.");
-        }
     }
 
     void Update()
     {
-        if (playerTransform == null || boss == null) return;
+        if (playerTransform == null) return;
 
         float distanceToPlayer = Vector3.Distance(transform.position, playerTransform.position);
 
@@ -47,7 +41,7 @@ public class OpenDoorBoss : MonoBehaviour
         {
             if (!doorIsOpened)
             {
-                if (boss.health <= 0.1f)
+                if (ObjectiveComplete != null && ObjectiveComplete.activeSelf)
                 {
                     interactionText.text = "[E] Open the door";
                     interactionText.enabled = true;
