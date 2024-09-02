@@ -34,7 +34,7 @@ _But be warned, Dr. Chen. In Whispering Pines, reality is fragile, and Michael's
 
 1. **Clone the Repository:**
 ```bash
-git clone https://github.com/your-username/whispering-pines-asylum.git
+git clone https://github.com/DBDoco/Echoes-of-Isolation.git
 ```
 
 2. **Open in Unity:**
