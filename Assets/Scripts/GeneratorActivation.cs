@@ -22,6 +22,11 @@ public class GeneratorActivation : MonoBehaviour
 
     void Start()
     {
+        if (enabledGenerators > 0)
+        {
+            enabledGenerators = 0;
+        }
+
         GameObject player = GameObject.FindWithTag("Player");
         playerTransform = player.transform;
 
@@ -87,7 +92,7 @@ public class GeneratorActivation : MonoBehaviour
     private IEnumerator Sub()
     {
         Voice.Play();
-        TheSubs.GetComponent<Text>().text = "That should be all of the generators. I better keep going forward if I want to leave this place.";
+        TheSubs.GetComponent<Text>().text = "That should be all of the generators. I better keep going forward.";
         yield return new WaitForSeconds(5);
         TheSubs.GetComponent<Text>().text = "";
     }
