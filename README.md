@@ -1,4 +1,4 @@
-# Echoes of Isolation
+<h1 align="center">Echoes of Isolation</h1>
 
 ![Game Screenshot](https://i.imgur.com/bVKEoUL.png)
 
