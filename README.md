@@ -48,7 +48,7 @@ git clone https://github.com/DBDoco/Echoes-of-Isolation.git
 - Launch the compiled game and navigate through the main menu to start your horror adventure.
 
 ## Credits
-- Developers: [DBDoco], [Marinactonci]
+- Developers: <a href="https://github.com/DBDoco">DBDoco</a>, <a href="https://github.com/marinactonci">marinactonci</a>
 - Game Engine: <a href="https://unity.com/">Unity</a>
 - Assets: All game assets were gathered from the <a href="https://assetstore.unity.com/">Unity Asset Store</a>.
 - Music & Sound Effects: Sourced from <a href="https://pixabay.com/sound-effects/">Pixabay</a>.
