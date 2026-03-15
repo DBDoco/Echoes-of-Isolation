@@ -2,13 +2,11 @@
 
 ![Game Screenshot](https://i.imgur.com/bVKEoUL.png)
 
-<div align="center">
-  <h3>
-    <a href="https://simmer.io/@DBDoco/echoes-of-isolation">
-      Try Live (Simmer.io)
-    </a>
-</h3>
-</div>
+## Play Now
+
+[![Play Echoes of Isolation](https://img.shields.io/badge/Play%20Now-Play%20Online-blue?style=for-the-badge&logo=unity)](https://play.unity.com/en/games/54af405a-fe22-4153-b9c4-3ab0bed7d719/echoes-of-isolation)
+
+**Play the game directly in your browser!**
 
 **Echoes of Isolation** is a retro FPS horror game inspired by the graphics and gameplay of the PS1 era. Developed using the Unity Game Engine, this game immerses players in a chilling, atmospheric adventure filled with puzzles, intense exploration, and terrifying encounters.
 
